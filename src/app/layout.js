@@ -16,7 +16,7 @@ const geistMono = localFont({
 export const metadata = {
   title: "Kennedy Ventures",
   description:
-    "Kennedy Ventures supports promising startups with the tools, the tech, and the capital to build and grow to their peak potential. If you're ready to move your idea forward and 'level up your business, set an appointment using the link below. And unlike the bozos in this stock photo, be sure to bring the appropriate footwear.",
+    "Kennedy Ventures supports promising startups with the tools, the tech, and the capital to build and grow to their peak potential. If you're ready to move your idea forward and level up your business, set an appointment using the link below. And unlike the bozos in this stock photo, be sure to bring the appropriate footwear.",
 };
 
 export default function RootLayout({ children }) {
