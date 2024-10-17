@@ -29,7 +29,7 @@ export default function Home() {
           <p className="text-white font-medium mt-24">
             Kennedy Ventures supports promising startups with the tools, the
             tech, and the capital to build and grow to their peak potential. If
-            you're ready to move your idea forward and level up your business,
+            you&apos;re ready to move your idea forward and level up your business,
             set an appointment using the link below. And unlike the bozos in
             this stock photo, be sure to bring the appropriate footwear.
           </p>
