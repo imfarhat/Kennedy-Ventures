@@ -7,7 +7,13 @@ const Nav = () => {
     <header className="bg-primary text-secondary z-40 flex items-center justify-center">
       <nav className="container w-full flex items-center justify-between">
         <Link href="/" className="flex items-center justify-center flex-col">
-          <Image src={Logo} height={100} width={100} className="size-24" />
+          <Image
+            src={Logo}
+            height={100}
+            width={100}
+            priority
+            className="size-24"
+          />
           <div className="-mt-6">
             <span className="font-extrabold uppercase text-sm">Kennedy</span>
             <br />

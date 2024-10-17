@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/Nav";
+// import Loading from "./loading";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,8 +27,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Nav />
-        <main className="min-h-screen flex items-center justify-center">
+        <main className="min-h-screen flex flex-col items-center justify-center">
           {children}
+          {/* <Loading /> */}
         </main>
       </body>
     </html>
