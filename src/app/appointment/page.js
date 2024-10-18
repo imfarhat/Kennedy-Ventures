@@ -11,7 +11,7 @@ const Appointment = () => {
           <div
             className="calendly-inline-widget w-full h-[60rem]"
             data-url="https://calendly.com/immoiffo/30min"
-            style={{ minWidth: "320px", height: "960px" }}
+            style={{ minWidth: "355px", height: "960px" }}
           ></div>
         </section>
         <Script
