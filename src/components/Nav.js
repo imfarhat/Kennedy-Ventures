@@ -13,6 +13,7 @@ const Nav = () => {
             width={100}
             priority
             className="size-20 md:size-24"
+            alt="Kennedy Ventures Logo"
           />
           <div className="-mt-6">
             <span className="font-extrabold uppercase text-xs">Kennedy</span>

@@ -10,6 +10,7 @@ const Loading = () => {
           height={150}
           width={150}
           priority
+          alt="Kennedy Ventures Logo"
           className="size-36"
         />
         <div className="text-secondary mt-2 flex flex-col items-center justify-center">
