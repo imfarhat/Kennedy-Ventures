@@ -104,7 +104,7 @@ const Portfolio = () => {
           style={{
             backgroundImage: `url(${KennedyVentureTalkImage.src})`,
           }}
-          className="flex items-center justify-center px-4 bg-center bg-cover py-32 md:py-48 relative w-full"
+          className="flex items-center justify-center px-4 bg-center bg-cover py-32 md:py-48 relative w-full bg-secondary/50"
         >
           <div className="inset-0 absolute bg-black/25"></div>
           <h1 className="text-primary font-semibold text-3xl md:text-4xl drop-shadow-md z-10">
