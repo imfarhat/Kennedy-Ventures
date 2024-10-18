@@ -203,7 +203,7 @@ export default function Home() {
               className="text-white rounded-full py-6 px-16 font-medium"
               asChild
             >
-              <Link href="mailto:example@mail.om">Contact Us</Link>
+              <Link href="mailto:example@gmail.com">Contact Us</Link>
             </Button>
             <div className="mt-6 flex items-center justify-center gap-1.5 text-white/90 font-semibold uppercase text-xs md:text-sm">
               <span>Amsterdam</span> |<span>New York</span> |
