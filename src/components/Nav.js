@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "@/assets/kennedy ventures Logo circle.png";
+import Logo from "@/assets/circular-logo.png";
 import Link from "next/link";
 
 const Nav = () => {
