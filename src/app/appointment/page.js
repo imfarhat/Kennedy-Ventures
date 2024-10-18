@@ -1,20 +1,6 @@
-"use client"
-import { useEffect } from "react";
+import Script from "next/script";
 
 const Appointment = () => {
-  useEffect(() => {
-    // Load the Calendly script
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup the script on component unmount
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <>
       <main className="min-h-screen h-full flex flex-col items-center justify-start">
@@ -23,11 +9,15 @@ const Appointment = () => {
             Book Appointment
           </h1>
           <div
-            className="calendly-inline-widget w-full"
+            className="calendly-inline-widget w-full h-[60rem]"
             data-url="https://calendly.com/immoiffo/30min"
-            style={{ minWidth: "320px", height: "750px" }}
+            style={{ minWidth: "320px", height: "960px" }}
           ></div>
         </section>
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="afterInteractive"
+        />
       </main>
     </>
   );
