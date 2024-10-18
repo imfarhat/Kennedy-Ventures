@@ -161,7 +161,7 @@ const Portfolio = () => {
                         </CardTitle>{" "}
                         {/* Custom title for the extra card */}
                         <CardDescription>
-                          Next startup can be here!
+                          Your startup can be here!
                         </CardDescription>{" "}
                         {/* Custom description */}
                       </div>
