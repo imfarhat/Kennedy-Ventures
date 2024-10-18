@@ -1,25 +1,33 @@
-import Script from "next/script";
+"use client";
+import { useEffect } from "react";
 
 const Appointment = () => {
+  useEffect(() => {
+    // Ensure Calendly script is loaded when the component mounts
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Cleanup the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []); // Empty dependency array ensures this runs once on mount
+
   return (
-    <>
-      <main className="min-h-screen h-full flex flex-col items-center justify-start">
-        <section className="container px-4 py-12 flex flex-col items-center justify-center">
-          <h1 className="text-secondary font-semibold text-3xl md:text-4xl mb-12 md:mb-4">
-            Book Appointment
-          </h1>
-          <div
-            className="calendly-inline-widget w-full h-[60rem]"
-            data-url="https://calendly.com/immoiffo/30min"
-            style={{ minWidth: "355px", height: "960px" }}
-          ></div>
-        </section>
-        <Script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="afterInteractive"
-        />
-      </main>
-    </>
+    <main className="min-h-screen h-full flex flex-col items-center justify-start">
+      <section className="container px-4 py-12 flex flex-col items-center justify-center">
+        <h1 className="text-secondary font-semibold text-3xl md:text-4xl mb-12 md:mb-4">
+          Book Appointment
+        </h1>
+        <div
+          className="calendly-inline-widget w-full h-[60rem]"
+          data-url="https://calendly.com/immoiffo/30min"
+          style={{ minWidth: "355px", height: "960px" }}
+        ></div>
+      </section>
+    </main>
   );
 };
 
