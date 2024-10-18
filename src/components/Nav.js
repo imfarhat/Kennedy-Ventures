@@ -4,26 +4,28 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <header className="bg-primary text-secondary z-40 flex items-center justify-center">
-      <nav className="container pr-4 pl-2 w-full flex items-center justify-between">
-        <Link href="/" className="flex items-center justify-center flex-col">
+    <header className="bg-primary text-secondary z-40 flex items-center justify-center sticky top-0 shadow-md">
+      <nav className="container pr-4 pl-0.5 w-full flex items-center justify-between">
+        <Link href="/" className="flex items-center justify-center flex-row">
           <Image
             src={Logo}
-            height={100}
-            width={100}
+            height={80}
+            width={80}
             priority
-            className="size-20 md:size-24"
+            className="size-16 md:size-20"
             alt="Kennedy Ventures Logo"
           />
-          <div className="-mt-6">
-            <span className="font-extrabold uppercase text-xs">Kennedy</span>
-            <br />
-            <p className="uppercase text-[0.575rem] -mt-1.5 w-full text-justify pb-2 tracking-widest font-medium">
+          <div className="-mt-[3px] md:-mt-0.5 -ml-2 flex flex-col items-center justify-center">
+            <span className="font-extrabold uppercase text-xl md:text-2xl">
+              Kennedy
+            </span>
+
+            <p className="md:pl-0.5 uppercase text-xs md:text-sm -mt-1 md:-mt-[3px] tracking-[0.225rem] md:tracking-[0.45rem] font-medium">
               Ventures
             </p>
           </div>
         </Link>
-        <div className="flex items-center justify-center gap-4 font-bold">
+        <div className="py-4 md:py-6 flex items-center justify-center gap-4 font-bold">
           <Link href="/">Home</Link>
           <Link href="/portfolio">Portfolio</Link>
         </div>
