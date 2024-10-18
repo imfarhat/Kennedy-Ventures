@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Logo from "@/assets/circular-logo.png";
-import LogoGif from "@/assets/Kennedy-venture.gif";
+import LogoGif from "@/assets/logo.gif";
 const Loading = () => {
   return (
     <main className="min-h-screen flex items-center justify-center">

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Logo from "@/assets/circular-logo.png";
 import Link from "next/link";
-import LogoGif from "@/assets/Kennedy-venture.gif";
+import LogoGif from "@/assets/logo.gif";
 
 const Nav = () => {
   return (
