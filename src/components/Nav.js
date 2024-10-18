@@ -12,12 +12,12 @@ const Nav = () => {
             height={100}
             width={100}
             priority
-            className="size-24"
+            className="size-20 md:size-24"
           />
           <div className="-mt-6">
-            <span className="font-extrabold uppercase text-sm">Kennedy</span>
+            <span className="font-extrabold uppercase text-xs">Kennedy</span>
             <br />
-            <p className="uppercase text-xs -mt-1.5 w-full text-justify pb-2 tracking-widest font-medium">
+            <p className="uppercase text-[0.575rem] -mt-1.5 w-full text-justify pb-2 tracking-widest font-medium">
               Ventures
             </p>
           </div>
