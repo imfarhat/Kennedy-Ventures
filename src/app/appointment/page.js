@@ -17,8 +17,8 @@ const Appointment = () => {
 
   return (
     <main className="min-h-screen h-full flex flex-col items-center justify-start">
-      <section className="container px-4 py-12 flex flex-col items-center justify-center">
-        <h1 className="text-secondary font-semibold text-3xl md:text-4xl mb-12 md:mb-4">
+      <section className="container px-4 mt-12 md:mt-20 mb-24 flex flex-col items-center justify-center">
+        <h1 className="text-secondary font-semibold text-3xl md:text-4xl mb-8 md:mb-2">
           Book Appointment
         </h1>
         <div
