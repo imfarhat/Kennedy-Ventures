@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <main className="min-h-screen flex flex-col items-start justify-start">
+      <main className="min-h-screen flex flex-col items-center justify-start">
         <section
           className="bg-cover bg-center flex flex-col items-center justify-start relative py-12 md:py-16 bg-secondary/75 w-full"
           style={{
