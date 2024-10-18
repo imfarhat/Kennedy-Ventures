@@ -7,7 +7,7 @@ const Nav = () => {
   return (
     <header className="bg-primary text-secondary z-40 flex items-center justify-center sticky top-0 shadow-md">
       <nav className="container pr-4 pl-0.5 w-full flex items-center justify-between">
-        <Link href="/" className="max-h-20">
+        <Link href="/" prefetch={true} className="max-h-20">
           <Image
             src={LogoGif}
             height={146.25}
@@ -18,7 +18,7 @@ const Nav = () => {
             unoptimized={true}
           />
         </Link>
-        {/* <Link href="/" className="flex items-center justify-center flex-row">
+        {/* <Link href="/" prefetch={true} className="flex items-center justify-center flex-row">
           <Image
             src={Logo}
             height={80}
@@ -38,8 +38,12 @@ const Nav = () => {
           </div>
         </Link> */}
         <div className="py-4 md:py-6 flex items-center justify-center gap-4 font-bold">
-          <Link href="/">Home</Link>
-          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/" prefetch={true}>
+            Home
+          </Link>
+          <Link href="/portfolio" prefetch={true}>
+            Portfolio
+          </Link>
         </div>
       </nav>
     </header>
