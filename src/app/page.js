@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex items-start justify-center">
       <section
-        className="bg-cover flex flex-col items-center justify-start relative py-12 md:py-16 bg-secondary/50 w-full bg-center"
+        className="bg-cover flex flex-col items-center justify-start relative py-12 md:py-16 bg-secondary/75 w-full bg-center"
         style={{
           backgroundImage: `url(${RunnderBgPng.src})`,
         }}
