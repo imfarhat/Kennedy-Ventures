@@ -27,10 +27,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Nav />
-        <main className="min-h-screen flex flex-col items-center justify-start">
+  
           {children}
           {/* <Loading /> */}
-        </main>
+       
       </body>
     </html>
   );

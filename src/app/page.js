@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export default function Home() {
   return (
-    <>
+    <main className="min-h-screen flex items-start justify-center">
       <section
         className="bg-cover flex flex-col items-center justify-start relative py-20 bg-secondary/50 w-full bg-center"
         style={{
@@ -47,6 +47,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
