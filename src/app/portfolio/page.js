@@ -146,7 +146,7 @@ const Portfolio = () => {
               <React.Fragment key={index}>
                 {/* Check if this is the last testimonial */}
                 {index === testimonialsData.length - 1 && (
-                  <Card className="max-w-[350px] w-full h-full rounded-none relative bg-secondary/5">
+                  <Card className="max-w-[350px] w-full h-full rounded-none relative">
                     <CardHeader className="flex flex-row items-center justify-start gap-2">
                       <Image
                         src={"/placeholder.svg"}
@@ -156,9 +156,13 @@ const Portfolio = () => {
                         alt={testimonial.title} // Use 'testimonial'
                       />
                       <div>
-                        <CardTitle>Your Startup</CardTitle>{" "}
+                        <CardTitle className="text-muted animate-pulse">
+                          Your Startup
+                        </CardTitle>{" "}
                         {/* Custom title for the extra card */}
-                        <CardDescription>You can be here!</CardDescription>{" "}
+                        <CardDescription>
+                          Your startup can be here!
+                        </CardDescription>{" "}
                         {/* Custom description */}
                       </div>
                     </CardHeader>
