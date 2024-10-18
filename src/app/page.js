@@ -64,8 +64,8 @@ export default function Home() {
               Services
             </h2>
           </div>
-          <div className="px-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-start justify-center -mt-[5.5rem] z-10">
-            <Card className="w-[360px] h-full bg-gray-500/75 rounded-none border-none">
+          <div className="px-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center -mt-[5.5rem] z-10">
+            <Card className="max-w-[360px] w-full h-full bg-gray-500/75 rounded-none border-none">
               <CardHeader className="bg-gray-500/95 flex flex-row items-center justify-start gap-2 text-white">
                 <Image
                   src={Logo}
@@ -85,7 +85,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="w-[360px] h-full bg-gray-500/75 rounded-none border-none">
+            <Card className="max-w-[360px] w-full h-full bg-gray-500/75 rounded-none border-none">
               <CardHeader className="bg-gray-500/95 flex flex-row items-center justify-start gap-2 text-white">
                 <Image
                   src={Logo}
@@ -105,7 +105,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="w-[360px] h-full bg-gray-500/75 rounded-none border-none">
+            <Card className="max-w-[360px] w-full h-full bg-gray-500/75 rounded-none border-none">
               <CardHeader className="bg-gray-500/95 flex flex-row items-center justify-start gap-2 text-white">
                 <Image
                   src={Logo}
