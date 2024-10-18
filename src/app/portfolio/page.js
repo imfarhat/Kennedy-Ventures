@@ -113,9 +113,8 @@ const Portfolio = () => {
         </section>
         <section className="container px-4 flex flex-col items-center justify-center">
           <article className="mt-12">
-            Portfolio From <strong>ecommerce</strong> and{" "}
-            <strong>social networks</strong>, to <strong>fintech</strong> and{" "}
-            {""}
+            From <strong>ecommerce</strong> and <strong>social networks</strong>
+            , to <strong>fintech</strong> and {""}
             <strong>artificial intelligence</strong>, Kennedy Ventures leverages
             our 15 years of experience and our network of clients and advisors
             to de-risk and accelerate innovation. We work fast, so our startup
