@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { Quote } from "lucide-react";
+
 const TestimonialCard = ({ data }) => {
   return (
     <Card className="max-w-[350px] w-full h-full rounded-none relative">
