@@ -118,10 +118,11 @@ export default function Home() {
                 <CardTitle>Capital Investment</CardTitle>
               </CardHeader>
               <CardContent className="pt-4 text-white">
-                When it comes time to step on the gas, you'll need financial
-                resources to scale. Kennedy offers a variety of founder-friendly
-                products, from equity and convertible debt, to simple
-                revenue-share loans. It's all about crafting a 'win-win'
+                When it comes time to step on the gas, you&apos;ll need
+                financial resources to scale. Kennedy offers a variety of
+                founder-friendly products, from equity and convertible debt, to
+                simple revenue-share loans. It&apos;s all about crafting a
+                &apos;win-win&apos;
               </CardContent>
             </Card>
           </div>
