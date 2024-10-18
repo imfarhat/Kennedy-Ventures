@@ -40,14 +40,18 @@ export default function Home() {
                 className="text-secondary font-semibold rounded-none py-6"
                 asChild
               >
-                <Link href="/appointment">Book Appointment</Link>
+                <Link href="/appointment" prefetch={true}>
+                  Book Appointment
+                </Link>
               </Button>
               <Button
                 variant="secondary"
                 className="text-white rounded-none py-6"
                 asChild
               >
-                <Link href="/portfolio">See Portfolio</Link>
+                <Link href="/portfolio" prefetch={true}>
+                  See Portfolio
+                </Link>
               </Button>
             </div>
           </div>
