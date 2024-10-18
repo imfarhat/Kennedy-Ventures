@@ -137,7 +137,7 @@ const Portfolio = () => {
             today.
           </article>
         </section>
-        <section className="mt-24 container px-4 flex flex-col items-center justify-center mb-24">
+        <section className="mt-12 container px-4 flex flex-col items-center justify-center mb-24">
           <h2 className="text-secondary font-semibold text-2xl md:text-3xl z-10">
             Testimonials
           </h2>
