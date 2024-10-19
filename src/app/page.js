@@ -1,3 +1,5 @@
+import * as motion from "framer-motion/client";
+import React from "react";
 import Image from "next/image";
 import Logo from "@/assets/circular-logo.png";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +9,27 @@ import ScottKennedyImage from "@/assets/scottydot3.jpg";
 import TalkKennedyVentureImage from "@/assets/talk-kennedy-ventures2.jpg";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
+const motionCTAContainer = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const motionCTAItem = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 export default function Home() {
   return (
     <>
@@ -35,13 +58,20 @@ export default function Home() {
               bozos in this stock photo, be sure to bring the appropriate
               footwear.
             </p>
-            <div className="grid grid-cols-2 items-center justify-start gap-4 md:gap-6 mt-12 md:mt-16 w-full max-w-96 md:max-w-[30rem]">
+            <motion.ul
+              variants={motionCTAContainer}
+              initial="hidden"
+              animate="visible"
+              className="motionCTAContainer grid grid-cols-2 items-center justify-start gap-4 md:gap-6 mt-12 md:mt-16 w-full max-w-96 md:max-w-[30rem]"
+            >
               <Button
                 className="text-secondary font-semibold rounded-none py-6"
                 asChild
               >
                 <Link href="/appointment" prefetch={true}>
-                  Book Appointment
+                  <motion.li variants={motionCTAItem} className="motionCTAItem">
+                    Book Appointment
+                  </motion.li>
                 </Link>
               </Button>
               <Button
@@ -50,10 +80,12 @@ export default function Home() {
                 asChild
               >
                 <Link href="/portfolio" prefetch={true}>
-                  See Portfolio
+                  <motion.li variants={motionCTAItem} className="motionCTAItem">
+                    See Portfolio
+                  </motion.li>
                 </Link>
               </Button>
-            </div>
+            </motion.ul>
           </div>
         </section>
         <section className="flex flex-col w-full items-center justify-center">
