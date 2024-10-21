@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "@/assets/circular-logo.png";
 import Link from "next/link";
 import LogoGif from "@/assets/logo.gif";
 
@@ -18,32 +17,9 @@ const Nav = () => {
             unoptimized={true}
           />
         </Link>
-        {/* <Link href="/" prefetch={true} className="flex items-center justify-center flex-row">
-          <Image
-            src={Logo}
-            height={80}
-            width={80}
-            priority
-            className="size-16 md:size-20"
-            alt="Kennedy Ventures Logo"
-          />
-          <div className="-mt-[3px] md:-mt-0.5 -ml-2 flex flex-col items-center justify-center">
-            <span className="font-extrabold uppercase text-xl md:text-2xl">
-              Kennedy
-            </span>
-
-            <p className="md:pl-0.5 uppercase text-xs md:text-sm -mt-1 md:-mt-[3px] tracking-[0.225rem] md:tracking-[0.45rem] font-medium">
-              Ventures
-            </p>
-          </div>
-        </Link> */}
         <div className="py-4 md:py-6 flex items-center justify-center gap-4 font-bold">
-          <Link href="/">
-            Home
-          </Link>
-          <Link href="/#portfolio" scroll={false}>
-            Portfolio
-          </Link>
+          <Link href="/">Home</Link>
+          <Link href="/#portfolio">Portfolio</Link>
         </div>
       </nav>
     </header>
