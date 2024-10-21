@@ -121,6 +121,13 @@ const Footer = () => {
               >
                 Portfolio
               </Link>
+              <Link
+                href="/appointment"
+                className="hover:underline"
+                prefetch={false}
+              >
+                Book Appointment
+              </Link>
             </aside>
           </aside>
 
