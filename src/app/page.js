@@ -8,19 +8,19 @@ import HeroSection from "@/components/home-page-ui/PortfolioSection.js/HeroSecti
 
 const aboutSectionData = [
   {
-    name: "Scott Kennedy",
+    name: "Person One",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum.",
     imagePath: "/icon.png",
   },
   {
-    name: "Miryam Levy",
+    name: "Person Two",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum.",
     imagePath: "/icon.png",
   },
   {
-    name: "Person 3",
+    name: "Person Three",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum.",
     imagePath: "/icon.png",
