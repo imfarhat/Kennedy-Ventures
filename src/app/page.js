@@ -9,22 +9,22 @@ import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 
 const aboutSectionData = [
   {
-    name: "Person 1",
+    name: "Scott Kennedy",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum.",
-    imagePath: "/icon.png",
+    imagePath: "/scott-kennedy.jpg",
   },
   {
     name: "Person 2",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum.",
-    imagePath: "/icon.png",
+    imagePath: "/scott-kennedy.jpg",
   },
   {
     name: "Person 3",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum.",
-    imagePath: "/icon.png",
+    imagePath: "/scott-kennedy.jpg",
   },
 ];
 
@@ -120,7 +120,7 @@ export default function Home() {
                 className="text-white rounded-full py-6"
                 asChild
               >
-                <Link href="/#portfolio">
+                <Link href="/#portfolio" prefetch={true}>
                   <motion.li variants={motionCTAItem} className="motionCTAItem">
                     See Portfolio
                   </motion.li>
