@@ -174,11 +174,9 @@ export default function Home() {
               </React.Fragment>
             ))}
           </article>
+          <div id="portfolio"></div>
         </section>
-        <section
-          id="portfolio"
-          className="flex flex-col w-full items-center justify-center bg-primary py-12 px-4"
-        >
+        <section className="flex flex-col w-full items-center justify-center bg-primary py-12 px-4">
           <h2 className="text-white font-semibold text-3xl md:text-4xl w-full text-center drop-shadow-md">
             Portfolio
           </h2>
