@@ -39,10 +39,20 @@ const Footer = () => {
         </div>
       </section>
 
-      <div className="container px-4 py-4">
-        <em className="text-xs md:text-sm font-medium">
+      <div className="container px-4 py-4 flex flex-wrap items-center justify-center gap-x-4 gp-y-2 md:justify-between">
+        <em className="text-xs md:text-sm font-medium whitespace-nowrap">
           &copy; {new Date().getFullYear()} Copyright Kennedy Ventures, B.V.
         </em>
+
+          <em className="text-xs md:text-sm font-medium whitespace-nowrap">
+            Email:{" "}
+            <Link
+              href={`mailto:example@email.com?subject=${subject}&body=${body}`}
+            >
+              example@email.com
+            </Link>
+          </em>
+      
       </div>
     </footer>
   );
