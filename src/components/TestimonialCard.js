@@ -16,9 +16,9 @@ const TestimonialCard = ({ data }) => {
       <CardHeader className="p-4 flex flex-row items-center justify-start gap-2 bg-secondary/5 group-hover:bg-inherit transition ease-in">
         <Image
           src={`${imagePath}`}
-          height={80}
-          width={80}
-          className="mix-blend-multiply object-contain max-h-16 h-full rounded-md"
+          height={64}
+          width={64}
+          className="mix-blend-multiply object-contain max-h-16 aspect-square h-full rounded-md"
           alt={title}
         />
 
@@ -26,7 +26,9 @@ const TestimonialCard = ({ data }) => {
           <CardTitle className="text-secondary text-lg md:text-xl">
             {title}
           </CardTitle>
-          <CardDescription className="-mt-1 truncate">{description}</CardDescription>
+          <CardDescription className="-mt-1 truncate">
+            {description}
+          </CardDescription>
         </div>
       </CardHeader>
       <CardContent className="pt-4 border-t group-hover:bg-secondary/5 transition ease-in h-full text-sm md:text-base text-muted-foreground group-hover:text-muted">
