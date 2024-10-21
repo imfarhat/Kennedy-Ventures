@@ -35,19 +35,19 @@ const servicesSectionData = [
     title: "Strategy/Innovation",
     description:
       "Sessions start with a breakdown of your products and services, your market, and your value proposition. Then we dive into innovative product development and business model strategies. Finally, we chart an execution plan and get to work.",
-    imagePath: "/icon.png",
+    imagePath: "/svgs/bulb-outline.svg",
   },
   {
     title: "Marketing/Sales Reboot",
     description:
       "If the product has already established its value to the customers, but is not selling, we conduct surveys and develop and optimize pitches to get the marketing message just right. Then we build a sales procedure to boost revenue.",
-    imagePath: "/icon.png",
+    imagePath: "/svgs/megaphone-outline.svg",
   },
   {
     title: "Capital Investment",
     description:
       "When it comes time to step on the gas, you&apos;ll need financial resources to scale. Kennedy offers a variety of founder-friendly products, from equity and convertible debt, to simple revenue-share loans. It&apos;s all about crafting a &apos;win-win&apos;",
-    imagePath: "/icon.png",
+    imagePath: "/svgs/cash-outline.svg",
   },
 ];
 
