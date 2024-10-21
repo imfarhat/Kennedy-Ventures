@@ -140,7 +140,7 @@ export default function Home() {
             </strong>
           </div>
           <div className="container px-4 flex flex-col items-start justify-center z-10">
-            <h2 className="mt-6 md:mt-8 text-5xl md:text-8xl font-extrabold text-primary max-w-[50rem]">
+            <h2 className="mt-4 md:mt-6 text-5xl md:text-8xl font-extrabold text-primary max-w-[50rem]">
               Are you ready to RUN
             </h2>
             <p className="text-white font-medium mt-8 md:mt-16 max-w-[60rem] text-sm md:text-base">
@@ -192,7 +192,7 @@ export default function Home() {
             Services
           </h2>
 
-          <div className="px-4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center z-10">
+          <div className="px-4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center">
             <Card className="max-w-[360px] w-full h-full text-secondary overflow-hidden hover:border-primary group hover:-translate-y-3 transition ease-in">
               <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit bg-secondary/5 backdrop-blur-sm transition ease-in">
                 <Image
@@ -255,7 +255,7 @@ export default function Home() {
             </Card>
           </div>
         </section>
-        <section className="w-full mt-12 md:mt-16 flex flex-col items-center justify-center mb-20">
+        <section className="w-full flex flex-col items-center justify-center py-20">
           <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
             About Us
           </h2>
@@ -269,7 +269,8 @@ export default function Home() {
                 className="size-52 bg-primary rounded-tr-[6.5rem] rounded-bl-[6.5rem] aspect-square"
                 alt="Scott Kennedy"
               />
-              <h3 className="mt-6 md:mt-8 text-xl font-semibold border-b-4 border-double border-secondary w-1/2 text-center">
+              <span className="border-b-4 border-double border-secondary w-1/2 mt-4 md:mt-6"></span>
+              <h3 className="mt-2 text-xl font-semibold text-center">
                 Person 1
               </h3>
               <p className="mt-4 text-muted-foreground text-justify text-sm md:text-base">
@@ -286,7 +287,8 @@ export default function Home() {
                 className="size-52 bg-primary rounded-tr-[6.5rem] rounded-bl-[6.5rem] aspect-square"
                 alt="Kennedy Ventures Logo"
               />
-              <h3 className="mt-6 md:mt-8 text-xl font-semibold border-b-4 border-double border-secondary w-1/2 text-center">
+              <span className="border-b-4 border-double border-secondary w-1/2 mt-4 md:mt-6"></span>
+              <h3 className="mt-2 text-xl font-semibold text-center">
                 Person 2
               </h3>
               <p className="mt-4 text-muted-foreground text-justify text-sm md:text-base">
@@ -303,7 +305,8 @@ export default function Home() {
                 className="size-52 bg-primary rounded-tr-[6.5rem] rounded-bl-[6.5rem] aspect-square"
                 alt="Kennedy Ventures Logo"
               />
-              <h3 className="mt-6 md:mt-8 text-xl font-semibold border-b-4 border-double border-secondary w-1/2 text-center">
+              <span className="border-b-4 border-double border-secondary w-1/2 mt-4 md:mt-6"></span>
+              <h3 className="mt-2 text-xl font-semibold text-center">
                 Person 3
               </h3>
               <p className="mt-4 text-muted-foreground text-justify text-sm md:text-base">
