@@ -12,8 +12,7 @@ const ServicesCard = ({ data }) => {
             width={48}
             priority
             className="size-12 bg-primary p-2 rounded-full aspect-square text-secondary"
-            alt="Kennedy Ventures Logo"
-            optimized={false}
+            alt={data.title}
           />
 
           <CardTitle className="text-[1.45rem]">{data.title}</CardTitle>

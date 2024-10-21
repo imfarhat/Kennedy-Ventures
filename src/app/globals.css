@@ -12,6 +12,23 @@ body {
   }
 }
 
+@layer components {
+  /*Font*/
+  @font-face {
+    font-family: "Chau Philomene One";
+    font-weight: 400;
+    font-style: normal;
+    src: url("./fonts/ChauPhilomeneOne-Regular.ttf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "Chau Philomene One";
+    font-weight: 400;
+    font-style: italic;
+    src: url("./fonts/ChauPhilomeneOne-Italic.ttf") format("opentype");
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

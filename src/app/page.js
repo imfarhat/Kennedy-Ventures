@@ -89,7 +89,7 @@ export default function Home() {
             </strong>
           </div>
           <div className="container flex flex-col items-start justify-center z-10">
-            <h2 className="mt-4 md:mt-6 text-5xl md:text-8xl font-extrabold text-primary max-w-[50rem]">
+            <h2 className="mt-4 md:mt-6 text-5xl md:text-8xl font-extrabold text-primary max-w-[35rem] font-run">
               Are you ready to RUN
             </h2>
             <p className="text-white font-medium mt-8 md:mt-16 max-w-[60rem] text-sm md:text-base">
