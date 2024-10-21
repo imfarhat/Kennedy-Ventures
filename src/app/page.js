@@ -106,7 +106,7 @@ export default function Home() {
               className="motionCTAContainer grid grid-cols-2 items-center justify-start gap-4 md:gap-6 mt-12 md:mt-16 w-full max-w-96 md:max-w-[30rem]"
             >
               <Button
-                className="text-secondary font-semibold rounded-none py-6"
+                className="text-secondary font-semibold rounded-full py-6"
                 asChild
               >
                 <Link href="/appointment" prefetch={true}>
@@ -117,7 +117,7 @@ export default function Home() {
               </Button>
               <Button
                 variant="secondary"
-                className="text-white rounded-none py-6"
+                className="text-white rounded-full py-6"
                 asChild
               >
                 <Link href="/#portfolio" scroll={false}>
@@ -129,18 +129,18 @@ export default function Home() {
             </motion.ul>
           </div>
         </section>
-        <section className="flex flex-col w-full items-center justify-center bg-primary py-12">
+        <section className="flex flex-col w-full items-center justify-center bg-primary py-12 relative">
           {/* <div className="bg-center bg-cover flex flex-col items-center justify-start relative py-8 md:py-12 bg-accent w-full">
             <h2 className="text-white font-semibold text-3xl md:text-4xl z-10 pb-[5.5rem]">
               Services
             </h2>
           </div> */}
 
-          <h2 className="text-white font-semibold text-3xl md:text-4xl w-full text-center px-4 drop-shadow-md">
+          <h2 className="text-white font-semibold text-3xl md:text-4xl w-full text-center px-4 drop-shadow-md z-10">
             Services
           </h2>
-
-          <div className="px-4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center">
+          <div className="inset-0 absolute top-0 bg-black/5"></div>
+          <div className="px-4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center z-10">
             {servicesSectionData.map((service, index) => (
               <React.Fragment key={index}>
                 <ServicesCard data={service} />
