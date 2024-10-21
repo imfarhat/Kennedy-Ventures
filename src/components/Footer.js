@@ -4,13 +4,19 @@ import TalkKennedyVentureImage from "@/assets/talk-kennedy-ventures2.jpg";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin } from "lucide-react";
+import { ArrowUp, Linkedin } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Footer = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "0px 100px -50px 0px", amount: 0.33, once: true }); // 33% visibility
+  const isInView = useInView(ref, {
+    margin: "0px 100px -50px 0px",
+    amount: 0.33,
+    once: true,
+  });
+
+  const [isVisible, setIsVisible] = useState(false);
 
   const subject = encodeURIComponent(
     "Inquiry about Services from Kennedy Ventures"
@@ -18,6 +24,25 @@ const Footer = () => {
   const body = encodeURIComponent(
     `Hello Kennedy Ventures Team,\n\nI am interested in your services, especially in the areas of Strategy/Innovation, Marketing/Sales Reboot, and Capital Investment.\n\nCould you please provide me with more information or set up a time for us to discuss further?\n\nThank you!\n\nBest regards,\n[Your Name]`
   );
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <footer className="border-t flex flex-col items-center justify-center">
@@ -30,8 +55,8 @@ const Footer = () => {
         <div className="absolute inset-0 bg-black/50" />
         <motion.div
           ref={ref}
-          initial={{ y: -75 }} // Start from above
-          animate={{ y: isInView ? 0 : -75 }} // Animate to the correct position
+          initial={{ y: -75 }}
+          animate={{ y: isInView ? 0 : -75 }}
           transition={{ type: "spring", stiffness: 100 }}
           className="mt-24 md:mt-28 z-10 flex flex-col items-center justify-center container px-4"
         >
@@ -62,8 +87,8 @@ const Footer = () => {
               prefetch={false}
             >
               <motion.div
-                initial={{ x: 100 }} // Start from right
-                animate={{ x: isInView ? 0 : 100 }} // Animate to the correct position
+                initial={{ x: 100 }}
+                animate={{ x: isInView ? 0 : 100 }}
                 transition={{ type: "spring", stiffness: 100 }}
               >
                 <Image
@@ -130,6 +155,17 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Copyright Kennedy Ventures, B.V.
         </em>
       </div>
+
+      {/* Scroll to Top Button */}
+      {isVisible && (
+        <Button
+          onClick={scrollToTop}
+          variant="outline"
+          className="fixed bottom-4 right-4 hover:text-white active:text-white active:bg-opacity-75 size-10 p-2 aspect-square rounded-full shadow"
+        >
+          <ArrowUp />
+        </Button>
+      )}
     </footer>
   );
 };
