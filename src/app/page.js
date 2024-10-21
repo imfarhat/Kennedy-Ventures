@@ -255,11 +255,11 @@ export default function Home() {
             </Card>
           </div>
         </section>
-        <section className="w-full flex flex-col items-center justify-center py-20">
+        <section className="w-full flex flex-col items-center justify-center py-12 px-4 container">
           <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
             About Us
           </h2>
-          <article className="mt-12 container px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-x-6 md:gap-x-8 gap-y-8">
+          <article className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-x-6 md:gap-x-8 gap-y-8">
             <aside className="flex flex-col items-center justify-center">
               <Image
                 src={Logo}
@@ -316,11 +316,11 @@ export default function Home() {
             </aside>
           </article>
         </section>
-        <section className="container px-4 flex flex-col items-center justify-center">
-          <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
+        <section className="flex flex-col w-full items-center justify-center bg-primary py-12 px-4">
+          <h2 className="text-white font-semibold text-3xl md:text-4xl w-full text-center drop-shadow-md">
             Portfolio
           </h2>
-          <article className="mt-12">
+          <article className="mt-6 container">
             From <strong>ecommerce</strong> and <strong>social networks</strong>
             , to <strong>fintech</strong> and {""}
             <strong>artificial intelligence</strong>, Kennedy Ventures leverages
@@ -334,7 +334,7 @@ export default function Home() {
             </em>
             .
           </article>
-          <article className="mt-6">
+          <article className="mt-6 container">
             We recognize that early stage startups don&apos;t always have access
             to the capital and resources they need to perform at their peak. So
             we select only a handful of clients at a time, and align our
@@ -344,33 +344,30 @@ export default function Home() {
             today.
           </article>
         </section>
-        <section className="mt-12 container px-4 flex flex-col items-center justify-center mb-24">
-          <h2 className="text-secondary font-semibold text-2xl md:text-3xl z-10">
+        <section className="flex flex-col w-full items-center justify-center py-12 px-4">
+          <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
             Testimonials
           </h2>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 items-center justify-center">
             {testimonialsData.map((testimonial, index) => (
               <React.Fragment key={index}>
-                {/* Check if this is the last testimonial */}
                 {index === testimonialsData.length - 1 && (
                   <Card className="max-w-[350px] w-full h-full rounded-none relative">
-                    <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit bg-secondary/5 backdrop-blur-sm transition ease-in">
+                    <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit backdrop-blur-sm transition ease-in">
                       <Image
                         src={"/placeholder.svg"}
                         height={80}
                         width={80}
                         className="max-h-20 object-cover rounded-full"
-                        alt={testimonial.title} // Use 'testimonial'
+                        alt={"Your Startup"}
                       />
                       <div>
                         <CardTitle className="text-muted animate-pulse">
                           Your Startup
                         </CardTitle>{" "}
-                        {/* Custom title for the extra card */}
                         <CardDescription>
                           Your startup can be here!
                         </CardDescription>{" "}
-                        {/* Custom description */}
                       </div>
                     </CardHeader>
                     <CardContent className="">
@@ -387,7 +384,6 @@ export default function Home() {
                   </Card>
                 )}
 
-                {/* Render the default TestimonialCard for all testimonials */}
                 <TestimonialCard data={testimonial} />
               </React.Fragment>
             ))}
