@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const Footer = () => {
+  const subject = encodeURIComponent(
+    "Inquiry about Services from Kennedy Ventures"
+  );
+  const body = encodeURIComponent(
+    `Hello Kennedy Ventures Team,\n\nI am interested in your services, especially in the areas of Strategy/Innovation, Marketing/Sales Reboot, and Capital Investment.\n\nCould you please provide me with more information or set up a time for us to discuss further?\n\nThank you!\n\nBest regards,\n[Your Name]`
+  );
+
   return (
     <footer className="border-t flex flex-col items-center justify-center">
       <section
@@ -19,7 +26,11 @@ const Footer = () => {
             className="text-white rounded-full py-6 px-16 font-medium"
             asChild
           >
-            <Link href="mailto:example@gmail.com">Contact Us</Link>
+            <Link
+              href={`mailto:example@email.com?subject=${subject}&body=${body}`}
+            >
+              Contact Us
+            </Link>
           </Button>
           <div className="mt-6 flex items-center justify-center gap-1.5 text-white/90 font-semibold uppercase text-xs md:text-sm">
             <span>Amsterdam</span> |<span>New York</span> |
