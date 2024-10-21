@@ -12,7 +12,7 @@ import { Quote } from "lucide-react";
 const TestimonialCard = ({ data }) => {
   const { title, imagePath, description, content } = data;
   return (
-    <Card className="max-w-[350px] w-full h-full group relative overflow-hidden hover:-translate-y-3 transition ease-in">
+    <Card className="max-w-[350px] w-full h-full group relative overflow-hidden hover:-translate-y-3 transition ease-in select-none">
       <CardHeader className="p-4 flex flex-row items-center justify-start gap-2 bg-secondary/5 group-hover:bg-inherit transition ease-in">
         <Image
           src={`${imagePath}`}

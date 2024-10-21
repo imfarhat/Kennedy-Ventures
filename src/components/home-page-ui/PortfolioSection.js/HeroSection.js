@@ -33,7 +33,7 @@ const HeroSection = () => {
 
   const isHeadingInView = useInView(headingRef, { once: true });
   const isParagraphInView = useInView(paragraphRef, { once: true });
-  const isButtonInView = useInView(buttonRef, { once: true });
+
 
   return (
     <section
