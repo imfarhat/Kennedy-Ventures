@@ -128,7 +128,7 @@ export default function Home() {
     <>
       <main className="min-h-screen flex flex-col items-center justify-start">
         <section
-          className="bg-cover bg-center flex flex-col items-center justify-start relative py-12 md:py-16 bg-secondary/75 w-full"
+          className="bg-cover bg-center flex flex-col items-center justify-start relative py-12 md:py-16 bg-secondary/75 w-full px-4"
           style={{
             backgroundImage: `url(${RunnderBgImage.src})`,
           }}
@@ -139,7 +139,7 @@ export default function Home() {
               *** Not Accepting New Clients ***
             </strong>
           </div>
-          <div className="container px-4 flex flex-col items-start justify-center z-10">
+          <div className="container flex flex-col items-start justify-center z-10">
             <h2 className="mt-4 md:mt-6 text-5xl md:text-8xl font-extrabold text-primary max-w-[50rem]">
               Are you ready to RUN
             </h2>
@@ -344,7 +344,7 @@ export default function Home() {
             today.
           </article>
         </section>
-        <section className="flex flex-col w-full items-center justify-center py-12 px-4">
+        <section className="flex flex-col w-full items-center justify-center py-12 px-4 container">
           <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
             Testimonials
           </h2>
