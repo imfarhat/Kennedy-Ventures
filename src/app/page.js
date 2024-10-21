@@ -143,22 +143,13 @@ export default function Home() {
             Services
           </h2>
           <div className="inset-0 absolute top-0 bg-black/5"></div>
-          <motion.ul
-            variants={motionCTAContainer}
-            initial="hidden"
-            animate="visible"
-            className="motionCTAContainerpx-4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center z-10"
-          >
+          <div className="4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center z-10">
             {servicesSectionData.map((service, index) => (
-              <motion.li
-                key={index}
-                className="motionCTAItem"
-                variants={motionCTAItem}
-              >
+              <React.Fragment key={index}>
                 <ServicesCard data={service} />
-              </motion.li>
+              </React.Fragment>
             ))}
-          </motion.ul>
+          </div>
         </section>
         <section
           id="about"
