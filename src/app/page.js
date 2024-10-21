@@ -84,15 +84,16 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-black/50" />
           <div className="z-10">
-            <strong className="uppercase italic text-white text-sm md:text-base">
+            <strong className="uppercase italic text-sm md:text-base text-white/90">
               *** Not Accepting New Clients ***
             </strong>
           </div>
           <div className="container flex flex-col items-start justify-center z-10">
-            <h2 className="mt-4 md:mt-6 text-5xl md:text-8xl font-extrabold text-primary max-w-[35rem] font-run">
-              Are you ready to RUN
+            <h2 className="mt-4 md:mt-6 text-5xl md:text-8xl font-extrabold text-primary max-w-[55rem] font-run line-clamp-5">
+              Are you ready <br /> <div className="w-full mt-3 md:mt-6"></div>{" "}
+              to RUN
             </h2>
-            <p className="text-white font-medium mt-8 md:mt-16 max-w-[60rem] text-sm md:text-base">
+            <p className="text-white font-medium mt-8 md:mt-16 max-w-[60rem] text-sm md:text-base drop-shadow-md">
               Kennedy Ventures supports promising startups with the tools, the
               tech, and the capital to build and grow to their peak potential.
               If you&apos;re ready to move your idea forward and level up your
