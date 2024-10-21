@@ -1,10 +1,17 @@
+"use client";
+
 import TalkKennedyVentureImage from "@/assets/talk-kennedy-ventures2.jpg";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { Linkedin } from "lucide-react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Footer = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "0px 100px -50px 0px", amount: 0.33, once: true }); // 33% visibility
+
   const subject = encodeURIComponent(
     "Inquiry about Services from Kennedy Ventures"
   );
@@ -21,7 +28,13 @@ const Footer = () => {
         }}
       >
         <div className="absolute inset-0 bg-black/50" />
-        <div className="mt-24 md:mt-28 z-10 flex flex-col items-center justify-center container px-4">
+        <motion.div
+          ref={ref}
+          initial={{ y: -75 }} // Start from above
+          animate={{ y: isInView ? 0 : -75 }} // Animate to the correct position
+          transition={{ type: "spring", stiffness: 100 }}
+          className="mt-24 md:mt-28 z-10 flex flex-col items-center justify-center container px-4"
+        >
           <Button
             variant="secondary"
             className="text-white rounded-full py-6 px-16 font-medium"
@@ -34,10 +47,10 @@ const Footer = () => {
             </Link>
           </Button>
           <div className="mt-6 flex items-center justify-center gap-1.5 text-white/90 font-semibold uppercase text-xs md:text-sm">
-            <span>Amsterdam</span> |<span>New York</span> |
+            <span>Amsterdam</span> | <span>New York</span> |{" "}
             <span>San Francisco</span>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <section className="flex items-center justify-center w-full">
@@ -48,14 +61,21 @@ const Footer = () => {
               className="flex items-center gap-2 font-bold"
               prefetch={false}
             >
-              <Image
-                src="/icon.png"
-                height={64}
-                width={64}
-                alt="Kennedy Ventures Logo"
-                className="size-16"
-                priority
-              />
+              <motion.div
+                initial={{ x: 100 }} // Start from right
+                animate={{ x: isInView ? 0 : 100 }} // Animate to the correct position
+                transition={{ type: "spring", stiffness: 100 }}
+              >
+                <Image
+                  src="/icon.png"
+                  height={64}
+                  width={64}
+                  alt="Kennedy Ventures Logo"
+                  className="size-16"
+                  priority
+                />
+              </motion.div>
+
               <span className="sr-only">Kennedy Ventures</span>
             </Link>
             <p className="text-muted-foreground !mt-0">
@@ -81,7 +101,6 @@ const Footer = () => {
 
           <aside className="flex flex-col items-start justify-start h-full max-w-96">
             <h4 className="text-lg font-medium">Contact Us</h4>
-
             <Link
               href={`mailto:example@email.com?subject=${subject}&body=${body}`}
               className="hover:underline mt-0.5"
@@ -89,7 +108,6 @@ const Footer = () => {
             >
               Email: example@email.com
             </Link>
-
             <div className="flex items-center justify-start gap-2 mt-2">
               <h4 className="font-medium mt-1">Social:</h4>
               <div>
@@ -115,4 +133,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;
