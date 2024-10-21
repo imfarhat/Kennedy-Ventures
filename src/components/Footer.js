@@ -1,7 +1,8 @@
 import TalkKennedyVentureImage from "@/assets/talk-kennedy-ventures2.jpg";
-
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
+import { Linkedin } from "lucide-react";
 
 const Footer = () => {
   const subject = encodeURIComponent(
@@ -20,7 +21,7 @@ const Footer = () => {
         }}
       >
         <div className="absolute inset-0 bg-black/50" />
-        <div className="mt-24 md:mt-28 z-10 flex flex-col items-center justify-center">
+        <div className="mt-24 md:mt-28 z-10 flex flex-col items-center justify-center container px-4">
           <Button
             variant="secondary"
             className="text-white rounded-full py-6 px-16 font-medium"
@@ -39,20 +40,77 @@ const Footer = () => {
         </div>
       </section>
 
-      <div className="container px-4 py-4 flex flex-wrap items-center justify-center gap-x-4 gp-y-2 md:justify-between">
+      <section className="flex items-center justify-center w-full">
+        <div className="container px-4 py-6 bg-secondary/5 rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-center justify-center w-full mx-4 mt-8">
+          <aside className="flex flex-col gap-4 items-start justify-start max-w-96">
+            <Link
+              href="/"
+              className="flex items-center gap-2 font-bold"
+              prefetch={false}
+            >
+              <Image
+                src="/icon.png"
+                height={64}
+                width={64}
+                alt="Kennedy Ventures Logo"
+                className="size-16"
+                priority
+              />
+              <span className="sr-only">Kennedy Ventures</span>
+            </Link>
+            <p className="text-muted-foreground !mt-0">
+              Helping extraordinary founders build and grow great companies.
+            </p>
+          </aside>
+
+          <aside className="flex flex-col items-start justify-start h-full max-w-96">
+            <h4 className="text-lg font-medium">Quick Links</h4>
+            <aside className="mt-0.5 flex flex-col items-start justify-start h-full text-muted-foreground">
+              <Link href="/" className="hover:underline" prefetch={false}>
+                Home
+              </Link>
+              <Link
+                href="/#portfolio"
+                className="hover:underline"
+                prefetch={false}
+              >
+                Portfolio
+              </Link>
+            </aside>
+          </aside>
+
+          <aside className="flex flex-col items-start justify-start h-full max-w-96">
+            <h4 className="text-lg font-medium">Contact Us</h4>
+
+            <Link
+              href={`mailto:example@email.com?subject=${subject}&body=${body}`}
+              className="hover:underline mt-0.5"
+              prefetch={false}
+            >
+              Email: example@email.com
+            </Link>
+
+            <div className="flex items-center justify-start gap-2 mt-2">
+              <h4 className="font-medium mt-1">Social:</h4>
+              <div>
+                <Link
+                  href="https://www.linkedin.com/company/kennedy-ventures"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="bg-white aspect-square rounded-full hover:text-white hover:scale-105 active:scale-100 transition-transform duration-200 ease-in hover:bg-blue-600 text-blue-600 active:bg-opacity-85 border-2 border-transparent hover:border-white flex items-center justify-center"
+                >
+                  <Linkedin className="size-12 p-2.5" />
+                </Link>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <div className="container px-4 py-4 flex flex-wrap items-center justify-start">
         <em className="text-xs md:text-sm font-medium whitespace-nowrap">
           &copy; {new Date().getFullYear()} Copyright Kennedy Ventures, B.V.
         </em>
-
-          <em className="text-xs md:text-sm font-medium whitespace-nowrap">
-            Email:{" "}
-            <Link
-              href={`mailto:example@email.com?subject=${subject}&body=${body}`}
-            >
-              example@email.com
-            </Link>
-          </em>
-      
       </div>
     </footer>
   );
