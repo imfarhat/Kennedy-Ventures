@@ -1,8 +1,6 @@
 import * as motion from "framer-motion/client";
 import React from "react";
-import Image from "next/image";
 import RunnderBgImage from "@/assets/runners.jpg";
-import ScottKennedyImage from "@/assets/scottydot3.jpg";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ServicesCard from "@/components/ServicesCard";
@@ -145,13 +143,22 @@ export default function Home() {
             Services
           </h2>
           <div className="inset-0 absolute top-0 bg-black/5"></div>
-          <div className="px-4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center z-10">
+          <motion.ul
+            variants={motionCTAContainer}
+            initial="hidden"
+            animate="visible"
+            className="motionCTAContainerpx-4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center z-10"
+          >
             {servicesSectionData.map((service, index) => (
-              <React.Fragment key={index}>
+              <motion.li
+                key={index}
+                className="motionCTAItem"
+                variants={motionCTAItem}
+              >
                 <ServicesCard data={service} />
-              </React.Fragment>
+              </motion.li>
             ))}
-          </div>
+          </motion.ul>
         </section>
         <section
           id="about"
