@@ -9,7 +9,6 @@ import ScottKennedyImage from "@/assets/scottydot3.jpg";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-import KennedyVentureTalkImage from "@/assets/talk-kennedy-ventures2.jpg";
 import {
   Card,
   CardContent,
@@ -182,21 +181,20 @@ export default function Home() {
             </motion.ul>
           </div>
         </section>
-        <section className="flex flex-col w-full items-center justify-center">
-          <div
-            className="bg-center bg-cover flex flex-col items-center justify-start relative py-8 md:py-12 bg-secondary/75 w-full"
-            style={{
-              backgroundImage: `url(${RunnderCloudBgImage.src})`,
-            }}
-          >
-            <div className="absolute inset-0 bg-black/35" />
+        <section className="flex flex-col w-full items-center justify-center bg-primary py-12">
+          {/* <div className="bg-center bg-cover flex flex-col items-center justify-start relative py-8 md:py-12 bg-accent w-full">
             <h2 className="text-white font-semibold text-3xl md:text-4xl z-10 pb-[5.5rem]">
               Services
             </h2>
-          </div>
-          <div className="px-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center -mt-[5.5rem] z-10">
-            <Card className="max-w-[360px] w-full h-full bg-gray-500/75 rounded-none border-none">
-              <CardHeader className="bg-gray-500/95 flex flex-row items-center justify-start gap-2 text-white">
+          </div> */}
+
+          <h2 className="text-white font-semibold text-3xl md:text-4xl w-full text-center px-4 drop-shadow-md">
+            Services
+          </h2>
+
+          <div className="px-4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center z-10">
+            <Card className="max-w-[360px] w-full h-full text-secondary overflow-hidden hover:border-primary group hover:-translate-y-3 transition ease-in">
+              <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit bg-secondary/5 backdrop-blur-sm transition ease-in">
                 <Image
                   src={Logo}
                   height={40}
@@ -207,7 +205,7 @@ export default function Home() {
                 />
                 <CardTitle>Strategy/Innovation</CardTitle>
               </CardHeader>
-              <CardContent className="pt-4 text-white">
+              <CardContent className="pt-4 border-t group-hover:bg-secondary/5  transition ease-in">
                 Sessions start with a breakdown of your products and services,
                 your market, and your value proposition. Then we dive into
                 innovative product development and business model strategies.
@@ -215,8 +213,8 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="max-w-[360px] w-full h-full bg-gray-500/75 rounded-none border-none">
-              <CardHeader className="bg-gray-500/95 flex flex-row items-center justify-start gap-2 text-white">
+            <Card className="max-w-[360px] w-full h-full text-secondary overflow-hidden hover:border-primary group hover:-translate-y-3 transition ease-in">
+              <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit bg-secondary/5 backdrop-blur-sm transition ease-in">
                 <Image
                   src={Logo}
                   height={40}
@@ -227,7 +225,7 @@ export default function Home() {
                 />
                 <CardTitle>Marketing/Sales Reboot</CardTitle>
               </CardHeader>
-              <CardContent className="pt-4 text-white">
+              <CardContent className="pt-4 border-t group-hover:bg-secondary/5  transition ease-in">
                 If the product has already established is value to the
                 customers, but is not selling, we conduct surveys and develop
                 and optimize pitches to get the marketing message just right.
@@ -235,8 +233,8 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="max-w-[360px] w-full h-full bg-gray-500/75 rounded-none border-none">
-              <CardHeader className="bg-gray-500/95 flex flex-row items-center justify-start gap-2 text-white">
+            <Card className="max-w-[360px] w-full h-full text-secondary overflow-hidden hover:border-primary group hover:-translate-y-3 transition ease-in">
+              <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit bg-secondary/5 backdrop-blur-sm transition ease-in">
                 <Image
                   src={Logo}
                   height={40}
@@ -247,7 +245,7 @@ export default function Home() {
                 />
                 <CardTitle>Capital Investment</CardTitle>
               </CardHeader>
-              <CardContent className="pt-4 text-white">
+              <CardContent className="pt-4 border-t group-hover:bg-secondary/5  transition ease-in">
                 When it comes time to step on the gas, you&apos;ll need
                 financial resources to scale. Kennedy offers a variety of
                 founder-friendly products, from equity and convertible debt, to
@@ -353,7 +351,7 @@ export default function Home() {
                 {/* Check if this is the last testimonial */}
                 {index === testimonialsData.length - 1 && (
                   <Card className="max-w-[350px] w-full h-full rounded-none relative">
-                    <CardHeader className="flex flex-row items-center justify-start gap-2">
+                    <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit bg-secondary/5 backdrop-blur-sm transition ease-in">
                       <Image
                         src={"/placeholder.svg"}
                         height={80}
