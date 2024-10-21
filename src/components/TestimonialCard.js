@@ -21,11 +21,13 @@ const TestimonialCard = ({ data }) => {
           alt={data.title}
         />
         <div>
-          <CardTitle>{data.title}</CardTitle>
+          <CardTitle className="text-secondary">{data.title}</CardTitle>
           <CardDescription>{data.description}</CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="mt-4">{data.content}</CardContent>
+      <CardContent className="pt-4 border-t bg-secondary/5 group-hover:bg-inherit transition ease-in h-full">
+        {data.content}
+      </CardContent>
       <CardFooter className="absolute bottom-0 right-0">
         <Quote className="text-muted-foreground/25 size-8" />
       </CardFooter>

@@ -370,7 +370,7 @@ export default function Home() {
                         </CardDescription>{" "}
                       </div>
                     </CardHeader>
-                    <CardContent className="mt-4">
+                    <CardContent className="pt-4 border-t bg-secondary/5 group-hover:bg-inherit transition ease-in h-full">
                       <Image
                         src={"/placeholder.svg"}
                         height={100}
