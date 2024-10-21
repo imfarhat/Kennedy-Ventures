@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ServicesCard from "@/components/ServicesCard";
 import AboutUsCard from "@/components/AboutUsCard";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 
 const aboutSectionData = [
   {
@@ -76,6 +76,7 @@ export default function Home() {
     <>
       <main className="min-h-screen flex flex-col items-center justify-start">
         <section
+          id="hero"
           className="bg-cover bg-center flex flex-col items-center justify-start relative py-12 md:py-16 bg-secondary/75 w-full px-4"
           style={{
             backgroundImage: `url(${RunnderBgImage.src})`,
@@ -129,7 +130,10 @@ export default function Home() {
             </motion.ul>
           </div>
         </section>
-        <section className="flex flex-col w-full items-center justify-center bg-primary py-12 relative">
+        <section
+          id="services"
+          className="flex flex-col w-full items-center justify-center bg-primary py-12 relative"
+        >
           {/* <div className="bg-center bg-cover flex flex-col items-center justify-start relative py-8 md:py-12 bg-accent w-full">
             <h2 className="text-white font-semibold text-3xl md:text-4xl z-10 pb-[5.5rem]">
               Services
@@ -148,7 +152,10 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="w-full flex flex-col items-center justify-center py-12 px-4 container">
+        <section
+          id="about"
+          className="w-full flex flex-col items-center justify-center py-12 px-4 container"
+        >
           <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
             About Us
           </h2>
@@ -160,7 +167,10 @@ export default function Home() {
             ))}
           </article>
         </section>
-        <section className="flex flex-col w-full items-center justify-center bg-primary py-12 px-4">
+        <section
+          id="portfolio"
+          className="flex flex-col w-full items-center justify-center bg-primary py-12 px-4"
+        >
           <h2 className="text-white font-semibold text-3xl md:text-4xl w-full text-center drop-shadow-md">
             Portfolio
           </h2>
@@ -188,7 +198,20 @@ export default function Home() {
             today.
           </article>
         </section>
-        <TestimonialsSection />
+        <section
+          id="testimonials"
+          className="flex flex-col w-full items-center justify-center py-12"
+        >
+          <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center container px-4">
+            Testimonials
+          </h2>
+          <TestimonialsCarousel />
+          <div className="container px-4">
+            <h3 className="mt-8 text-secondary font-semibold text-lg sm:text-xl md:text-2xl w-full text-center">
+              Your startup can be here. Contact us!
+            </h3>
+          </div>
+        </section>
       </main>
     </>
   );
