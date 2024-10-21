@@ -44,7 +44,7 @@ const servicesSectionData = [
   {
     title: "Capital Investment",
     description:
-      "When it comes time to step on the gas, you&apos;ll need financial resources to scale. Kennedy offers a variety of founder-friendly products, from equity and convertible debt, to simple revenue-share loans. It&apos;s all about crafting a &apos;win-win&apos;",
+      "When it comes time to step on the gas, you'll need financial resources to scale. Kennedy offers a variety of founder-friendly products, from equity and convertible debt, to simple revenue-share loans. It's all about crafting a 'win-win'",
     imagePath: "/svgs/cash-outline.svg",
   },
 ];
@@ -145,9 +145,7 @@ export default function Home() {
           <div className="inset-0 absolute top-0 bg-black/5"></div>
           <div className="4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center z-10">
             {servicesSectionData.map((service, index) => (
-              <React.Fragment key={index}>
-                <ServicesCard data={service} />
-              </React.Fragment>
+              <ServicesCard data={service} key={index} />
             ))}
           </div>
         </section>
