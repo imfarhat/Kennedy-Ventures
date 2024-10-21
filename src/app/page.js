@@ -13,19 +13,19 @@ const aboutSectionData = [
   {
     name: "Person 1",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum exercitationem alias totam! Ad dolorum corrupti repudiandae vitae id ab nesciunt repellendus. Nisi.",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum.",
     imagePath: "/icon.png",
   },
   {
     name: "Person 2",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum exercitationem alias totam! Ad dolorum corrupti repudiandae vitae id ab nesciunt repellendus. Nisi.",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum.",
     imagePath: "/icon.png",
   },
   {
     name: "Person 3",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum exercitationem alias totam! Ad dolorum corrupti repudiandae vitae id ab nesciunt repellendus. Nisi.",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum.",
     imagePath: "/icon.png",
   },
 ];
