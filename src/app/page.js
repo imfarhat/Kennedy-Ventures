@@ -120,7 +120,7 @@ export default function Home() {
                 className="text-white rounded-full py-6"
                 asChild
               >
-                <Link href="/#portfolio" scroll={false}>
+                <Link href="/#portfolio">
                   <motion.li variants={motionCTAItem} className="motionCTAItem">
                     See Portfolio
                   </motion.li>
