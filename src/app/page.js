@@ -1,14 +1,11 @@
 import * as motion from "framer-motion/client";
 import React from "react";
 import Image from "next/image";
-import Logo from "@/assets/circular-logo.png";
 import RunnderBgImage from "@/assets/runners.jpg";
-import RunnderCloudBgImage from "@/assets/runners-cloud.jpg";
 import ScottKennedyImage from "@/assets/scottydot3.jpg";
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+import ServicesCard from "@/components/ServicesCard";
 import {
   Card,
   CardContent,
@@ -20,6 +17,7 @@ import {
 
 import TestimonialCard from "@/components/TestimonialCard";
 import { Quote } from "lucide-react";
+import AboutUsCard from "@/components/AboutUsCard";
 
 const testimonialsData = [
   {
@@ -100,6 +98,48 @@ const testimonialsData = [
     description: "Boat Rental Platform",
     content:
       "We worked with Kennedy through the Rockstart accelerator program, and the resulting focus and structure gave us a big strategic advantage over the other startups.",
+  },
+];
+
+const aboutSectionData = [
+  {
+    name: "Person 1",
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum exercitationem alias totam! Ad dolorum corrupti repudiandae vitae id ab nesciunt repellendus. Nisi.",
+    imagePath: "/icon.png",
+  },
+  {
+    name: "Person 2",
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum exercitationem alias totam! Ad dolorum corrupti repudiandae vitae id ab nesciunt repellendus. Nisi.",
+    imagePath: "/icon.png",
+  },
+  {
+    name: "Person 3",
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum exercitationem alias totam! Ad dolorum corrupti repudiandae vitae id ab nesciunt repellendus. Nisi.",
+    imagePath: "/icon.png",
+  },
+];
+
+const servicesSectionData = [
+  {
+    title: "Strategy/Innovation",
+    description:
+      "Sessions start with a breakdown of your products and services, your market, and your value proposition. Then we dive into innovative product development and business model strategies. Finally, we chart an execution plan and get to work.",
+    imagePath: "/icon.png",
+  },
+  {
+    title: "Marketing/Sales Reboot",
+    description:
+      "If the product has already established its value to the customers, but is not selling, we conduct surveys and develop and optimize pitches to get the marketing message just right. Then we build a sales procedure to boost revenue.",
+    imagePath: "/icon.png",
+  },
+  {
+    title: "Capital Investment",
+    description:
+      "When it comes time to step on the gas, you&apos;ll need financial resources to scale. Kennedy offers a variety of founder-friendly products, from equity and convertible debt, to simple revenue-share loans. It&apos;s all about crafting a &apos;win-win&apos;",
+    imagePath: "/icon.png",
   },
 ];
 
@@ -193,66 +233,11 @@ export default function Home() {
           </h2>
 
           <div className="px-4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center">
-            <Card className="max-w-[360px] w-full h-full text-secondary overflow-hidden hover:border-primary group hover:-translate-y-3 transition ease-in">
-              <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit bg-secondary/5 backdrop-blur-sm transition ease-in">
-                <Image
-                  src={Logo}
-                  height={40}
-                  width={40}
-                  priority
-                  className="size-10 bg-primary"
-                  alt="Kennedy Ventures Logo"
-                />
-                <CardTitle>Strategy/Innovation</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4 border-t group-hover:bg-secondary/5  transition ease-in">
-                Sessions start with a breakdown of your products and services,
-                your market, and your value proposition. Then we dive into
-                innovative product development and business model strategies.
-                Finally, we chart an execution plan and get to work.
-              </CardContent>
-            </Card>
-
-            <Card className="max-w-[360px] w-full h-full text-secondary overflow-hidden hover:border-primary group hover:-translate-y-3 transition ease-in">
-              <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit bg-secondary/5 backdrop-blur-sm transition ease-in">
-                <Image
-                  src={Logo}
-                  height={40}
-                  width={40}
-                  priority
-                  className="size-10 bg-primary"
-                  alt="Kennedy Ventures Logo"
-                />
-                <CardTitle>Marketing/Sales Reboot</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4 border-t group-hover:bg-secondary/5  transition ease-in">
-                If the product has already established is value to the
-                customers, but is not selling, we conduct surveys and develop
-                and optimize pitches to get the marketing message just right.
-                Then we build a sales procedure to boost revenue.
-              </CardContent>
-            </Card>
-
-            <Card className="max-w-[360px] w-full h-full text-secondary overflow-hidden hover:border-primary group hover:-translate-y-3 transition ease-in">
-              <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit bg-secondary/5 backdrop-blur-sm transition ease-in">
-                <Image
-                  src={Logo}
-                  height={40}
-                  width={40}
-                  priority
-                  className="size-10 bg-primary"
-                  alt="Kennedy Ventures Logo"
-                />
-                <CardTitle>Capital Investment</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4 border-t group-hover:bg-secondary/5  transition ease-in">
-                When it comes time to step on the gas, you&apos;ll need
-                financial resources to scale. Kennedy offers a variety of
-                founder-friendly products, from equity and convertible debt, to
-                simple revenue-share loans. It&apos;s all about crafting a
-                &apos;win-win&apos;
-              </CardContent>
-            </Card>
+            {servicesSectionData.map((service, index) => (
+              <React.Fragment key={index}>
+                <ServicesCard data={service} />
+              </React.Fragment>
+            ))}
           </div>
         </section>
         <section className="w-full flex flex-col items-center justify-center py-12 px-4 container">
@@ -260,60 +245,11 @@ export default function Home() {
             About Us
           </h2>
           <article className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-x-6 md:gap-x-8 gap-y-8">
-            <aside className="flex flex-col items-center justify-center">
-              <Image
-                src={Logo}
-                height={208}
-                width={208}
-                priority
-                className="size-52 bg-primary rounded-tr-[6.5rem] rounded-bl-[6.5rem] aspect-square"
-                alt="Scott Kennedy"
-              />
-              <span className="border-b-4 border-double border-secondary w-1/2 mt-4 md:mt-6"></span>
-              <h3 className="mt-2 text-xl font-semibold text-center">
-                Person 1
-              </h3>
-              <p className="mt-4 text-muted-foreground text-justify text-sm md:text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                molestiae enim odio labore? Nobis nesciunt, repellendus porro.
-              </p>
-            </aside>
-            <aside className="flex flex-col items-center justify-center">
-              <Image
-                src={Logo}
-                height={208}
-                width={208}
-                priority
-                className="size-52 bg-primary rounded-tr-[6.5rem] rounded-bl-[6.5rem] aspect-square"
-                alt="Kennedy Ventures Logo"
-              />
-              <span className="border-b-4 border-double border-secondary w-1/2 mt-4 md:mt-6"></span>
-              <h3 className="mt-2 text-xl font-semibold text-center">
-                Person 2
-              </h3>
-              <p className="mt-4 text-muted-foreground text-justify text-sm md:text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                molestiae enim odio labore? Nobis nesciunt, repellendus porro.
-              </p>
-            </aside>
-            <aside className="flex flex-col items-center justify-center">
-              <Image
-                src={Logo}
-                height={208}
-                width={208}
-                priority
-                className="size-52 bg-primary rounded-tr-[6.5rem] rounded-bl-[6.5rem] aspect-square"
-                alt="Kennedy Ventures Logo"
-              />
-              <span className="border-b-4 border-double border-secondary w-1/2 mt-4 md:mt-6"></span>
-              <h3 className="mt-2 text-xl font-semibold text-center">
-                Person 3
-              </h3>
-              <p className="mt-4 text-muted-foreground text-justify text-sm md:text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                molestiae enim odio labore? Nobis nesciunt, repellendus porro.
-              </p>
-            </aside>
+            {aboutSectionData.map((about, index) => (
+              <React.Fragment key={index}>
+                <AboutUsCard data={about} />
+              </React.Fragment>
+            ))}
           </article>
         </section>
         <section className="flex flex-col w-full items-center justify-center bg-primary py-12 px-4">
@@ -354,15 +290,13 @@ export default function Home() {
                 {index === testimonialsData.length - 1 && (
                   <Card className="max-w-[350px] w-full h-full group relative overflow-hidden hover:-translate-y-3 transition ease-in">
                     <CardHeader className="p-4 flex flex-row items-center justify-start gap-2 bg-secondary/5 group-hover:bg-inherit transition ease-in">
-                      
-                        <Image
-                          src={"/placeholder.svg"}
-                          height={80}
-                          width={80}
-                          className="mix-blend-multiply object-contain max-h-16 h-full rounded-md"
-                          alt={"Your Startup"}
-                        />
-                  
+                      <Image
+                        src={"/placeholder.svg"}
+                        height={80}
+                        width={80}
+                        className="mix-blend-multiply object-contain max-h-16 h-full rounded-md"
+                        alt={"Your Startup"}
+                      />
 
                       <div>
                         <CardTitle className="text-muted animate-pulse text-lg md:text-xl">
