@@ -16,7 +16,7 @@ const ServicesCard = ({ data }) => {
             optimized={false}
           />
 
-          <CardTitle>{data.title}</CardTitle>
+          <CardTitle className="text-[1.45rem]">{data.title}</CardTitle>
         </CardHeader>
         <CardContent className="pt-4 border-t group-hover:bg-secondary/5 transition ease-in">
           {data.description}
