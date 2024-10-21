@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 const ServicesCard = ({ data }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "0px", amount: 0.33, once: true });
+  const isInView = useInView(ref, { margin: "0px", amount: 0.25, once: true });
 
   return (
     <motion.div
