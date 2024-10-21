@@ -11,20 +11,20 @@ const aboutSectionData = [
   {
     name: "Scott Kennedy",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum.",
-    imagePath: "/scott-kennedy.jpg",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum.",
+    imagePath: "/icon.png",
   },
   {
-    name: "Person 2",
+    name: "Miryam Levy",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum.",
-    imagePath: "/scott-kennedy.jpg",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum.",
+    imagePath: "/icon.png",
   },
   {
     name: "Person 3",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum, tempore animi temporibus earum.",
-    imagePath: "/scott-kennedy.jpg",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum.",
+    imagePath: "/icon.png",
   },
 ];
 
