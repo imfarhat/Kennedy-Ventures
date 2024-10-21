@@ -13,6 +13,10 @@ body {
 }
 
 @layer components {
+  html {
+    scroll-behavior: smooth;
+  }
+
   /*Font*/
   @font-face {
     font-family: "Chau Philomene One";
