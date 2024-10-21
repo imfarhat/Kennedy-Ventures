@@ -125,8 +125,8 @@ const TestimonialsCarousel = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hover:text-white active:text-white active:bg-secondary/75" />
+      <CarouselNext className="hover:text-white active:text-white active:bg-secondary/75" />
     </Carousel>
   );
 };
