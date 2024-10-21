@@ -202,9 +202,9 @@ export default function Home() {
           id="testimonials"
           className="flex flex-col w-full items-center justify-center py-12"
         >
-          <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center container px-4">
+          {/* <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center container px-4">
             Testimonials
-          </h2>
+          </h2> */}
           <TestimonialsCarousel />
           <div className="container px-4">
             <h3 className="mt-8 text-secondary font-semibold text-lg sm:text-xl md:text-2xl w-full text-center">
