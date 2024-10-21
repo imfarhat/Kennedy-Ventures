@@ -104,31 +104,35 @@ const testimonialsData = [
 
 const TestimonialsSection = () => {
   return (
-    <Carousel
-      opts={{
-        loop: true,
-      }}
-      plugins={[
-        Autoplay({
-          delay: 2500,
-        }),
-      ]}
-      className="flex flex-col w-full items-center justify-center py-12 px-4 container overflow-hidden"
-    >
+    <section className="flex flex-col w-full items-center justify-center py-12">
       <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
         Testimonials
       </h2>
-      <CarouselContent className="mt-8 flex space-x-4">
-        {testimonialsData.map((testimonial, index) => (
-          <CarouselItem
-            key={index}
-            className="flex-shrink-0 w-full max-w-[350px] cursor-grab active:cursor-grabbing"
-          >
-            <TestimonialCard data={testimonial} />
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-    </Carousel>
+      <Carousel
+        opts={{
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 2500,
+          }),
+        ]}
+        className="container"
+      >
+        <CarouselContent className="mt-8 flex space-x-4">
+          {testimonialsData.map((testimonial, index) => (
+            <CarouselItem
+              key={index}
+              className="flex-shrink-0 w-full max-w-[350px] cursor-grab active:cursor-grabbing"
+            >
+              <TestimonialCard data={testimonial} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </section>
   );
 };
 export default TestimonialsSection;
