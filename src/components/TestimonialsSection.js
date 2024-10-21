@@ -104,35 +104,31 @@ const testimonialsData = [
 
 const TestimonialsSection = () => {
   return (
-    <>
-      <Carousel
-        opts={{
-          loop: true,
-        }}
-        plugins={[
-          Autoplay({
-            delay: 2500,
-          }),
-        ]}
-        className="flex flex-col w-full items-center justify-center py-12 px-4 container"
-      >
-        <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
-          Testimonials
-        </h2>
-        <>
-          <CarouselContent className="mt-8">
-            {testimonialsData.map((testimonial, index) => (
-              <CarouselItem
-                key={index}
-                className="sm:basis-1/2 md:basis-1/3 xl:basis-1/4 2xl:bases1/5 cursor-grab active:cursor-grabbing max-w-[350px] w-full h-full"
-              >
-                <TestimonialCard data={testimonial} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </>
-      </Carousel>
-    </>
+    <Carousel
+      opts={{
+        loop: true,
+      }}
+      plugins={[
+        Autoplay({
+          delay: 2500,
+        }),
+      ]}
+      className="flex flex-col w-full items-center justify-center py-12 px-4 container overflow-hidden"
+    >
+      <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
+        Testimonials
+      </h2>
+      <CarouselContent className="mt-8 flex space-x-4">
+        {testimonialsData.map((testimonial, index) => (
+          <CarouselItem
+            key={index}
+            className="flex-shrink-0 w-full max-w-[350px] cursor-grab active:cursor-grabbing"
+          >
+            <TestimonialCard data={testimonial} />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   );
 };
 export default TestimonialsSection;
