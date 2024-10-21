@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Card,
@@ -10,6 +11,14 @@ import {
 import TestimonialCard from "@/components/TestimonialCard";
 import { Quote } from "lucide-react";
 import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const testimonialsData = [
   {
@@ -96,52 +105,33 @@ const testimonialsData = [
 const TestimonialsSection = () => {
   return (
     <>
-      <section className="flex flex-col w-full items-center justify-center py-12 px-4 container">
+      <Carousel
+        opts={{
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 2500,
+          }),
+        ]}
+        className="flex flex-col w-full items-center justify-center py-12 px-4 container"
+      >
         <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
           Testimonials
         </h2>
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 items-center justify-center">
-          {testimonialsData.map((testimonial, index) => (
-            <React.Fragment key={index}>
-              {index === testimonialsData.length - 1 && (
-                <Card className="max-w-[350px] w-full h-full group relative overflow-hidden hover:-translate-y-3 transition ease-in">
-                  <CardHeader className="p-4 flex flex-row items-center justify-start gap-2 bg-secondary/5 group-hover:bg-inherit transition ease-in">
-                    <Image
-                      src={"/placeholder.svg"}
-                      height={80}
-                      width={80}
-                      className="mix-blend-multiply object-contain max-h-16 h-full rounded-md"
-                      alt={"Your Startup"}
-                    />
-
-                    <div>
-                      <CardTitle className="text-muted animate-pulse text-lg md:text-xl">
-                        Your Startup
-                      </CardTitle>{" "}
-                      <CardDescription className="-mt-1">
-                        Your startup can be here!
-                      </CardDescription>{" "}
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-4 border-t  group-hover:bg-secondary/5 transition ease-in h-full">
-                    <Image
-                      src={"/placeholder.svg"}
-                      height={100}
-                      width={100}
-                      className="object-cover w-full h-28"
-                    />
-                  </CardContent>
-                  <CardFooter className="p-0 m-0">
-                    <Quote className="absolute bottom-1 right-1 text-muted-foreground/25 size-8" />
-                  </CardFooter>
-                </Card>
-              )}
-
-              <TestimonialCard data={testimonial} />
-            </React.Fragment>
-          ))}
-        </div>
-      </section>
+        <>
+          <CarouselContent className="mt-8">
+            {testimonialsData.map((testimonial, index) => (
+              <CarouselItem
+                key={index}
+                className="sm:basis-1/2 md:basis-1/3 xl:basis-1/4 2xl:bases1/5 cursor-grab active:cursor-grabbing max-w-[350px] w-full h-full"
+              >
+                <TestimonialCard data={testimonial} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </>
+      </Carousel>
     </>
   );
 };
