@@ -38,10 +38,10 @@ const Nav = () => {
           </div>
         </Link> */}
         <div className="py-4 md:py-6 flex items-center justify-center gap-4 font-bold">
-          <Link href="/" prefetch={true}>
+          <Link href="/">
             Home
           </Link>
-          <Link href="/portfolio" prefetch={true}>
+          <Link href="/#portfolio" scroll={false}>
             Portfolio
           </Link>
         </div>
