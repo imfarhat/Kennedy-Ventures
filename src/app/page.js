@@ -353,24 +353,27 @@ export default function Home() {
               <React.Fragment key={index}>
                 {index === testimonialsData.length - 1 && (
                   <Card className="max-w-[350px] w-full h-full group relative overflow-hidden hover:-translate-y-3 transition ease-in">
-                    <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-secondary/5 transition ease-in">
-                      <Image
-                        src={"/placeholder.svg"}
-                        height={80}
-                        width={80}
-                        className="max-h-20 object-cover rounded-full"
-                        alt={"Your Startup"}
-                      />
+                    <CardHeader className="p-4 flex flex-row items-center justify-start gap-2 bg-secondary/5 group-hover:bg-inherit transition ease-in">
+                      
+                        <Image
+                          src={"/placeholder.svg"}
+                          height={80}
+                          width={80}
+                          className="mix-blend-multiply object-contain max-h-16 h-full rounded-md"
+                          alt={"Your Startup"}
+                        />
+                  
+
                       <div>
-                        <CardTitle className="text-muted animate-pulse">
+                        <CardTitle className="text-muted animate-pulse text-lg md:text-xl">
                           Your Startup
                         </CardTitle>{" "}
-                        <CardDescription>
+                        <CardDescription className="-mt-1">
                           Your startup can be here!
                         </CardDescription>{" "}
                       </div>
                     </CardHeader>
-                    <CardContent className="pt-4 border-t bg-secondary/5 group-hover:bg-inherit transition ease-in h-full">
+                    <CardContent className="pt-4 border-t  group-hover:bg-secondary/5 transition ease-in h-full">
                       <Image
                         src={"/placeholder.svg"}
                         height={100}
@@ -378,8 +381,8 @@ export default function Home() {
                         className="object-cover w-full h-28"
                       />
                     </CardContent>
-                    <CardFooter className="absolute bottom-0 right-0">
-                      <Quote className="text-secondary/5 drop-shadow-md size-8" />
+                    <CardFooter className="p-0 m-0">
+                      <Quote className="absolute bottom-1 right-1 text-muted-foreground/25 size-8" />
                     </CardFooter>
                   </Card>
                 )}

@@ -10,26 +10,30 @@ import Image from "next/image";
 import { Quote } from "lucide-react";
 
 const TestimonialCard = ({ data }) => {
+  const { title, imagePath, description, content } = data;
   return (
     <Card className="max-w-[350px] w-full h-full group relative overflow-hidden hover:-translate-y-3 transition ease-in">
-      <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-secondary/5 transition ease-in">
+      <CardHeader className="p-4 flex flex-row items-center justify-start gap-2 bg-secondary/5 group-hover:bg-inherit transition ease-in">
         <Image
-          src={`${data.imagePath}`}
+          src={`${imagePath}`}
           height={80}
           width={80}
-          className="max-h-20 h-full object-cover"
-          alt={data.title}
+          className="mix-blend-multiply object-contain max-h-16 h-full rounded-md"
+          alt={title}
         />
+
         <div>
-          <CardTitle className="text-secondary">{data.title}</CardTitle>
-          <CardDescription>{data.description}</CardDescription>
+          <CardTitle className="text-secondary text-lg md:text-xl">
+            {title}
+          </CardTitle>
+          <CardDescription className="-mt-1">{description}</CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="pt-4 border-t bg-secondary/5 group-hover:bg-inherit transition ease-in h-full">
-        {data.content}
+      <CardContent className="pt-4 border-t group-hover:bg-secondary/5 transition ease-in h-full text-sm md:text-base">
+        {content}
       </CardContent>
-      <CardFooter className="absolute bottom-0 right-0">
-        <Quote className="text-muted-foreground/25 size-8" />
+      <CardFooter className="p-0 m-0">
+        <Quote className="absolute bottom-1 right-1 text-muted-foreground/25 size-8" />
       </CardFooter>
     </Card>
   );
