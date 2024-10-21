@@ -26,7 +26,7 @@ const TestimonialCard = ({ data }) => {
           <CardTitle className="text-secondary text-lg md:text-xl">
             {title}
           </CardTitle>
-          <CardDescription className="-mt-1">{description}</CardDescription>
+          <CardDescription className="-mt-1 truncate">{description}</CardDescription>
         </div>
       </CardHeader>
       <CardContent className="pt-4 border-t group-hover:bg-secondary/5 transition ease-in h-full text-sm md:text-base text-muted-foreground group-hover:text-muted">
