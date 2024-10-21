@@ -105,7 +105,7 @@ const testimonialsData = [
 const TestimonialsSection = () => {
   return (
     <section className="flex flex-col w-full items-center justify-center py-12">
-      <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
+      <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center container px-4">
         Testimonials
       </h2>
       <Carousel
@@ -117,7 +117,7 @@ const TestimonialsSection = () => {
             delay: 2500,
           }),
         ]}
-        className="container"
+        className="container px-4"
       >
         <CarouselContent className="mt-8 flex space-x-4">
           {testimonialsData.map((testimonial, index) => (
