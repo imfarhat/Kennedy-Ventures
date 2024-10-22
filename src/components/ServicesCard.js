@@ -28,7 +28,7 @@ const ServicesCard = ({ data }) => {
           />
           <CardTitle className="text-[1.45rem]">{data.title}</CardTitle>
         </CardHeader>
-        <CardContent className="pt-4 border-t group-hover:bg-secondary/5 transition ease-in h-full text-muted-foreground group-hover:text-muted">
+        <CardContent className="pt-4 border-t group-hover:bg-secondary/5 transition ease-in h-full text-muted-foreground group-hover:text-muted text-justify">
           {data.description}
         </CardContent>
       </Card>

@@ -31,7 +31,7 @@ const TestimonialCard = ({ data }) => {
           </CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="pt-4 border-t group-hover:bg-secondary/5 transition ease-in h-full text-sm md:text-base text-muted-foreground group-hover:text-muted">
+      <CardContent className="pt-4 border-t group-hover:bg-secondary/5 transition ease-in h-full text-sm md:text-base text-muted-foreground group-hover:text-muted text-justify">
         {content}
       </CardContent>
       <CardFooter className="p-0 m-0">
