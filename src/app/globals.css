@@ -17,7 +17,22 @@ body {
     scroll-behavior: smooth;
   }
 
-  /*Font*/
+  strong {
+    @apply font-medium;
+  }
+
+  body {
+    @apply caret-secondary selection:text-white selection:bg-secondary;
+  }
+
+  img {
+    @apply select-none;
+  }
+
+  button {
+    @apply select-none;
+  }
+
   @font-face {
     font-family: "Chau Philomene One";
     font-weight: 400;
