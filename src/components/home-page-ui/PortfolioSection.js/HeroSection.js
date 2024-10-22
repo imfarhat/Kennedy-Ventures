@@ -29,7 +29,7 @@ const motionCTAItem = {
 const HeroSection = () => {
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
-  const buttonRef = useRef(null);
+
 
   const isHeadingInView = useInView(headingRef, { once: true });
   const isParagraphInView = useInView(paragraphRef, { once: true });

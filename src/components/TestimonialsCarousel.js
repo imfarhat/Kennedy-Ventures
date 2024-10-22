@@ -1,16 +1,7 @@
 "use client";
-import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import React, { useRef } from "react";
 import TestimonialCard from "@/components/TestimonialCard";
-import { Quote } from "lucide-react";
-import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 import {
   Carousel,
   CarouselContent,
@@ -103,31 +94,48 @@ const testimonialsData = [
 ];
 
 const TestimonialsCarousel = () => {
+  const CTARef = useRef(null);
+  const isCTAInView = useInView(CTARef, { once: true });
   return (
-    <Carousel
-      opts={{
-        loop: true,
-      }}
-      plugins={[
-        Autoplay({
-          delay: 2500,
-        }),
-      ]}
-      className="container px-4 flex items-center justify-center"
-    >
-      <CarouselContent className="mt-8 flex space-x-4">
-        {testimonialsData.map((testimonial, index) => (
-          <CarouselItem
-            key={index}
-            className="flex-shrink-0 w-full max-w-[350px] cursor-grab active:cursor-grabbing"
-          >
-            <TestimonialCard data={testimonial} />
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="hover:text-white active:text-white active:bg-secondary/75" />
-      <CarouselNext className="hover:text-white active:text-white active:bg-secondary/75" />
-    </Carousel>
+    <>
+      <Carousel
+        opts={{
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 2500,
+          }),
+        ]}
+        className="container px-4 flex items-center justify-center"
+      >
+        <CarouselContent className="mt-8 flex space-x-4">
+          {testimonialsData.map((testimonial, index) => (
+            <CarouselItem
+              key={index}
+              className="flex-shrink-0 w-full max-w-[350px] cursor-grab active:cursor-grabbing"
+            >
+              <TestimonialCard data={testimonial} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hover:text-white active:text-white active:bg-secondary/75" />
+        <CarouselNext className="hover:text-white active:text-white active:bg-secondary/75" />
+      </Carousel>
+      <motion.div
+        ref={CTARef}
+        animate={{
+          y: isCTAInView ? 0 : 50,
+          opacity: isCTAInView ? 1 : 0,
+        }} // Animate to position and opacity
+        transition={{ duration: 0.5 }} // Adjust the duration as needed
+        className="container px-4"
+      >
+        <h3 className="mt-8 text-secondary font-semibold text-lg sm:text-xl md:text-2xl w-full text-center italic">
+          Your startup can be here. Contact us!
+        </h3>
+      </motion.div>
+    </>
   );
 };
 export default TestimonialsCarousel;

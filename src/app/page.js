@@ -98,11 +98,7 @@ export default function Home() {
             Testimonials
           </h2> */}
           <TestimonialsCarousel />
-          <div className="container px-4">
-            <h3 className="mt-8 text-secondary font-semibold text-lg sm:text-xl md:text-2xl w-full text-center">
-              Your startup can be here. Contact us!
-            </h3>
-          </div>
+   
         </section>
       </main>
     </>
