@@ -41,7 +41,7 @@ body {
     @apply bg-primary;
   }
   body::-webkit-scrollbar-thumb {
-    @apply bg-secondary active:bg-secondary/95 rounded-tl-full rounded-br-full;
+    @apply bg-secondary active:bg-secondary/85 rounded-tl-full rounded-br-full;
   }
 
   @font-face {
