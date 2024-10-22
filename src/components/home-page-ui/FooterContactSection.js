@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import TalkKennedyVentureImage from "@/assets/talk-kennedy-ventures2.jpg";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -27,13 +27,13 @@ const FooterContactSection = () => {
           backgroundImage: `url(${TalkKennedyVentureImage.src})`,
         }}
       >
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/50 z-[1]" />
         <motion.div
           ref={ref}
           initial={{ y: -50 }}
           animate={{ y: isInView ? 0 : -50 }}
           transition={{ type: "spring", stiffness: 100 }}
-          className="mt-24 md:mt-28 z-10 flex flex-col items-center justify-center container px-4"
+          className="mt-24 md:mt-28 z-[2] flex flex-col items-center justify-center container px-4"
         >
           <Button
             variant="secondary"
