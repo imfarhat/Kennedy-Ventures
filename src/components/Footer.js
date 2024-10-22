@@ -125,7 +125,7 @@ const Footer = () => {
       </section>
 
       <div className="container px-4 py-4 flex flex-wrap items-center justify-start">
-        <em className="text-xs md:text-sm font-medium whitespace-nowrap">
+        <em className="text-xs md:text-sm font-medium whitespace-nowrap text-muted-foreground">
           &copy; {new Date().getFullYear()} Copyright Kennedy Ventures, B.V.
         </em>
       </div>
