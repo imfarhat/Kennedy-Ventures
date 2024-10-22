@@ -48,12 +48,11 @@ const servicesSectionData = [
   },
 ];
 
-
 export default function Home() {
   return (
     <>
       <main className="min-h-screen flex flex-col items-center justify-start">
-<HeroSection/>
+        <HeroSection />
         <section
           id="services"
           className="flex flex-col w-full items-center justify-center bg-primary py-12 relative"
