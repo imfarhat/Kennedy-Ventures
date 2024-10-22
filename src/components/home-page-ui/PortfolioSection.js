@@ -34,7 +34,7 @@ const PortfolioSection = () => {
           opacity: isArticleLeftInView ? 1 : 0,
         }} // Animate to position and opacity
         transition={{ duration: 0.5 }} // Adjust the duration as needed
-        className="mt-6 container px-4"
+        className="mt-6 container px-4 text-justify"
       >
         From <strong>ecommerce</strong> and <strong>social networks</strong>, to{" "}
         <strong>fintech</strong> and <strong>artificial intelligence</strong>,
@@ -56,7 +56,7 @@ const PortfolioSection = () => {
           opacity: isArticleRightInView ? 1 : 0,
         }} // Animate to position and opacity
         transition={{ duration: 0.5 }} // Adjust the duration as needed
-        className="mt-6 container px-4"
+        className="mt-6 container px-4 text-justify"
       >
         We recognize that early stage startups don&apos;t always have access to
         the capital and resources they need to perform at their peak. So we
