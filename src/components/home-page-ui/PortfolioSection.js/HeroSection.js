@@ -34,7 +34,6 @@ const HeroSection = () => {
   const isHeadingInView = useInView(headingRef, { once: true });
   const isParagraphInView = useInView(paragraphRef, { once: true });
 
-
   return (
     <section
       id="hero"
@@ -85,27 +84,28 @@ const HeroSection = () => {
           animate="visible"
           className="motionCTAContainer grid grid-cols-2 items-center justify-start gap-4 md:gap-6 mt-12 md:mt-16 w-full max-w-96 md:max-w-[30rem]"
         >
-          <Button
-            className="text-secondary font-semibold rounded-full py-6"
-            asChild
-          >
-            <Link href="/appointment" prefetch={true}>
-              <motion.li variants={motionCTAItem} className="motionCTAItem">
+          <motion.li variants={motionCTAItem} className="motionCTAItem">
+            <Button
+              className="text-secondary font-semibold rounded-full py-6 w-full"
+              asChild
+            >
+              <Link href="/appointment" prefetch={true}>
                 Book Appointment
-              </motion.li>
-            </Link>
-          </Button>
-          <Button
-            variant="secondary"
-            className="text-white rounded-full py-6"
-            asChild
-          >
-            <Link href="/#portfolio" prefetch={true}>
-              <motion.li variants={motionCTAItem} className="motionCTAItem">
+              </Link>
+            </Button>
+          </motion.li>
+
+          <motion.li variants={motionCTAItem} className="motionCTAItem">
+            <Button
+              variant="secondary"
+              className="text-white rounded-full py-6 w-full"
+              asChild
+            >
+              <Link href="/#portfolio" prefetch={true}>
                 See Portfolio
-              </motion.li>
-            </Link>
-          </Button>
+              </Link>
+            </Button>
+          </motion.li>
         </motion.ul>
       </div>
     </section>
