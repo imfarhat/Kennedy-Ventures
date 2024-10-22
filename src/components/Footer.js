@@ -44,7 +44,6 @@ const Footer = () => {
 
   return (
     <footer className="border-t flex flex-col items-center justify-center">
-
       <section className="flex items-center justify-center w-full">
         <div className="container px-4 py-6 bg-secondary/5 rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-center justify-center w-full mx-4 mt-8">
           <aside className="flex flex-col gap-4 items-start justify-start max-w-96">
@@ -54,6 +53,7 @@ const Footer = () => {
               prefetch={false}
             >
               <motion.div
+                ref={ref}
                 initial={{ x: 100 }}
                 animate={{ x: isInView ? 0 : 100 }}
                 transition={{ type: "spring", stiffness: 100 }}
