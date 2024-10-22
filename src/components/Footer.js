@@ -57,6 +57,7 @@ const Footer = () => {
                 initial={{ x: 100 }}
                 animate={{ x: isInView ? 0 : 100 }}
                 transition={{ type: "spring", stiffness: 100 }}
+                className="flex items-center justify-start gap-2"
               >
                 <Image
                   src="/icon.png"
@@ -66,9 +67,16 @@ const Footer = () => {
                   className="size-16"
                   priority
                 />
-              </motion.div>
+                <div className="text-secondary flex flex-col items-start justify-start">
+                  <span className="font-extrabold uppercase text-xl md:text-2xl">
+                    Kennedy
+                  </span>
 
-              <span className="sr-only">Kennedy Ventures</span>
+                  <p className="md:pl-0.5 uppercase text-xs md:text-sm -mt-1 md:-mt-[3px] tracking-[0.225rem] md:tracking-[0.45rem] font-medium">
+                    Ventures
+                  </p>
+                </div>
+              </motion.div>
             </Link>
             <p className="text-muted-foreground !mt-0">
               Helping extraordinary founders build and grow great companies.
