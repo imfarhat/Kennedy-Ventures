@@ -22,12 +22,11 @@ const Appointment = () => {
           Book Appointment
         </h1>
         <div
-          className="calendly-inline-widget w-full h-[60rem] bg-cover"
+          className="calendly-inline-widget w-full h-[60rem] bg-contain bg-center bg-no-repeat bg-[url('/svgs/undraw_online_calendar_re_wk3t.svg')]"
           data-url="https://calendly.com/immoiffo/30min"
           style={{
             minWidth: "355px",
             height: "960px",
-            backgroundImage: "url('/svgs/undraw_online_calendar_re_wk3t.svg')",
           }}
         ></div>
       </section>
