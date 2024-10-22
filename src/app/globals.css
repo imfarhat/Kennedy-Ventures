@@ -33,6 +33,17 @@ body {
     @apply select-none;
   }
 
+  /* Scrollbar styling */
+  body::-webkit-scrollbar {
+    @apply w-2.5 h-2.5;
+  }
+  body::-webkit-scrollbar-track {
+    @apply bg-primary;
+  }
+  body::-webkit-scrollbar-thumb {
+    @apply bg-secondary active:bg-secondary/95 rounded-tl-full rounded-br-full;
+  }
+
   @font-face {
     font-family: "Chau Philomene One";
     font-weight: 400;
