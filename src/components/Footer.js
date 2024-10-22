@@ -50,7 +50,7 @@ const Footer = () => {
             <Link
               href="/"
               className="flex items-center gap-2 font-bold"
-              prefetch={false}
+              prefetch={true}
             >
               <motion.div
                 ref={ref}
@@ -86,20 +86,20 @@ const Footer = () => {
           <aside className="flex flex-col items-start justify-start h-full max-w-96">
             <h4 className="text-lg font-medium">Quick Links</h4>
             <aside className="mt-0.5 flex flex-col items-start justify-start h-full text-muted-foreground">
-              <Link href="/" className="hover:underline" prefetch={false}>
+              <Link href="/" className="hover:underline" prefetch={true}>
                 Home
               </Link>
               <Link
                 href="/#portfolio"
                 className="hover:underline"
-                prefetch={false}
+                prefetch={true}
               >
                 Portfolio
               </Link>
               <Link
                 href="/appointment"
                 className="hover:underline"
-                prefetch={false}
+                prefetch={true}
               >
                 Book Appointment
               </Link>
@@ -112,7 +112,7 @@ const Footer = () => {
               <Link
                 href={`mailto:example@email.com?subject=${subject}&body=${body}`}
                 className="hover:underline mt-0.5"
-                prefetch={false}
+                prefetch={true}
               >
                 Email: example@email.com
               </Link>
