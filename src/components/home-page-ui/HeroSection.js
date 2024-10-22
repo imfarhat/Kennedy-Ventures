@@ -30,14 +30,13 @@ const HeroSection = () => {
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
 
-
   const isHeadingInView = useInView(headingRef, { once: true });
   const isParagraphInView = useInView(paragraphRef, { once: true });
 
   return (
     <section
       id="hero"
-      className="bg-cover bg-center flex flex-col items-center justify-start relative py-12 md:py-16 bg-secondary/75 w-full px-4"
+      className="bg-cover bg-center flex flex-col items-center justify-start relative pt-12 md:pt-16 bg-secondary/75 w-full px-4"
       style={{
         backgroundImage: `url(${RunnderBgImage.src})`,
       }}
@@ -48,9 +47,7 @@ const HeroSection = () => {
           *** Not Accepting New Clients ***
         </strong>
       </div>
-      <div
-        className="container flex flex-col items-start justify-center z-10 overflow-hidden"
-      >
+      <div className="container flex flex-col items-start justify-center z-10 overflow-hidden">
         <motion.h2
           ref={headingRef}
           initial={{ x: -50, opacity: 0 }} // Start from left
@@ -83,11 +80,11 @@ const HeroSection = () => {
           variants={motionCTAContainer}
           initial="hidden"
           animate="visible"
-          className="motionCTAContainer grid grid-cols-2 items-center justify-start gap-4 md:gap-6 mt-12 md:mt-16 max-w-96 md:max-w-[30rem] w-full "
+          className="motionCTAContainer grid grid-cols-2 items-center justify-start gap-4 md:gap-6 mt-12 md:mt-16 max-w-96 md:max-w-[30rem] w-full pb-12 md:pb-16"
         >
           <motion.li variants={motionCTAItem} className="motionCTAItem">
             <Button
-              className="text-secondary font-semibold rounded-full py-6 w-full"
+              className="text-secondary font-semibold rounded-full py-5 md:py-6 w-full"
               asChild
             >
               <Link href="/appointment" prefetch={true}>
@@ -99,7 +96,7 @@ const HeroSection = () => {
           <motion.li variants={motionCTAItem} className="motionCTAItem">
             <Button
               variant="secondary"
-              className="text-white rounded-full py-6 w-full"
+              className="text-white rounded-full py-5 md:py-6 w-full"
               asChild
             >
               <Link href="/#portfolio" prefetch={true}>
