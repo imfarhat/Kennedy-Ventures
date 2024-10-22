@@ -1,3 +1,4 @@
+"use client"
 import TalkKennedyVentureImage from "@/assets/talk-kennedy-ventures2.jpg";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";

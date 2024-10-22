@@ -1,12 +1,10 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUp, Linkedin } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import FooterContactSection from "./home-page-ui/FooterContactSection";
 
 const Footer = () => {
   const ref = useRef(null);
@@ -46,7 +44,7 @@ const Footer = () => {
 
   return (
     <footer className="border-t flex flex-col items-center justify-center">
-      <FooterContactSection />
+
       <section className="flex items-center justify-center w-full">
         <div className="container px-4 py-6 bg-secondary/5 rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-center justify-center w-full mx-4 mt-8">
           <aside className="flex flex-col gap-4 items-start justify-start max-w-96">

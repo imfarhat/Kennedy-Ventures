@@ -5,6 +5,7 @@ import AboutUsCard from "@/components/AboutUsCard";
 import TestimonialsCarousel from "@/components/home-page-ui/TestimonialsCarousel";
 import PortfolioSection from "@/components/home-page-ui/PortfolioSection";
 import HeroSection from "@/components/home-page-ui/HeroSection";
+import FooterContactSection from "@/components/home-page-ui/FooterContactSection";
 
 const aboutSectionData = [
   {
@@ -101,6 +102,7 @@ export default function Home() {
           </h2> */}
           <TestimonialsCarousel />
         </section>
+        <FooterContactSection />
       </main>
     </>
   );
