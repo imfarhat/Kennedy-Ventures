@@ -9,22 +9,22 @@ import FooterContactSection from "@/components/home-page-ui/FooterContactSection
 
 const aboutSectionData = [
   {
-    name: "Person One",
+    name: "Scott Kennedy",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum.",
-    imagePath: "/icon.png",
+    imagePath: "/scott-kennedy.jpg",
   },
   {
     name: "Person Two",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum.",
-    imagePath: "/icon.png",
+    imagePath: "/scott-kennedy.jpg",
   },
   {
     name: "Person Three",
     about:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum.",
-    imagePath: "/icon.png",
+    imagePath: "/scott-kennedy.jpg",
   },
 ];
 
