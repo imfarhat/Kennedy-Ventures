@@ -13,7 +13,7 @@ const PortfolioSection = () => {
   const isArticleRightInView = useInView(articleRightRef, { once: true });
 
   return (
-    <section className="flex flex-col w-full items-center justify-center bg-primary py-12 px-4">
+    <section className="flex flex-col w-full items-center justify-center bg-primary py-12 overflow-hidden">
       <motion.h2
         ref={headingRef}
         initial={{ y: -50, opacity: 0 }} // Start from above with reduced opacity
@@ -34,7 +34,7 @@ const PortfolioSection = () => {
           opacity: isArticleLeftInView ? 1 : 0,
         }} // Animate to position and opacity
         transition={{ duration: 0.5 }} // Adjust the duration as needed
-        className="mt-6 container"
+        className="mt-6 container px-4"
       >
         From <strong>ecommerce</strong> and <strong>social networks</strong>, to{" "}
         <strong>fintech</strong> and <strong>artificial intelligence</strong>,
@@ -56,7 +56,7 @@ const PortfolioSection = () => {
           opacity: isArticleRightInView ? 1 : 0,
         }} // Animate to position and opacity
         transition={{ duration: 0.5 }} // Adjust the duration as needed
-        className="mt-6 container"
+        className="mt-6 container px-4"
       >
         We recognize that early stage startups don&apos;t always have access to
         the capital and resources they need to perform at their peak. So we

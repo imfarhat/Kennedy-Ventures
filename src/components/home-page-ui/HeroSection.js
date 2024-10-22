@@ -48,7 +48,9 @@ const HeroSection = () => {
           *** Not Accepting New Clients ***
         </strong>
       </div>
-      <div className="container flex flex-col items-start justify-center z-10">
+      <div
+        className="container flex flex-col items-start justify-center z-10 overflow-hidden"
+      >
         <motion.h2
           ref={headingRef}
           initial={{ x: -50, opacity: 0 }} // Start from left
@@ -57,10 +59,9 @@ const HeroSection = () => {
             opacity: isHeadingInView ? 1 : 0,
           }} // Animate to original position
           transition={{ duration: 0.5 }} // Adjust the duration as needed
-          className="mt-4 md:mt-6 text-5xl md:text-8xl font-extrabold text-primary max-w-[55rem] font-run line-clamp-5"
+          className="mt-4 md:mt-6 text-5xl md:text-8xl font-extrabold text-primary max-w-[55rem] font-run"
         >
-          Are you ready <br /> <div className="w-full mt-3 md:mt-6"></div> to
-          RUN
+          Are you ready <br /> <div className="mt-3 md:mt-6">to RUN</div>
         </motion.h2>
         <motion.p
           ref={paragraphRef}
@@ -82,7 +83,7 @@ const HeroSection = () => {
           variants={motionCTAContainer}
           initial="hidden"
           animate="visible"
-          className="motionCTAContainer grid grid-cols-2 items-center justify-start gap-4 md:gap-6 mt-12 md:mt-16 w-full max-w-96 md:max-w-[30rem]"
+          className="motionCTAContainer grid grid-cols-2 items-center justify-start gap-4 md:gap-6 mt-12 md:mt-16 max-w-96 md:max-w-[30rem] w-full "
         >
           <motion.li variants={motionCTAItem} className="motionCTAItem">
             <Button

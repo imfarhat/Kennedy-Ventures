@@ -2,9 +2,9 @@ import React from "react";
 
 import ServicesCard from "@/components/ServicesCard";
 import AboutUsCard from "@/components/AboutUsCard";
-import TestimonialsCarousel from "@/components/TestimonialsCarousel";
-import PortfolioSection from "@/components/home-page-ui/PortfolioSection.js/PortfolioSection";
-import HeroSection from "@/components/home-page-ui/PortfolioSection.js/HeroSection";
+import TestimonialsCarousel from "@/components/home-page-ui/TestimonialsCarousel";
+import PortfolioSection from "@/components/home-page-ui/PortfolioSection";
+import HeroSection from "@/components/home-page-ui/HeroSection";
 
 const aboutSectionData = [
   {
@@ -89,7 +89,9 @@ export default function Home() {
           </article>
           <div id="portfolio"></div>
         </section>
+
         <PortfolioSection />
+
         <section
           id="testimonials"
           className="flex flex-col w-full items-center justify-center py-12"
@@ -98,7 +100,6 @@ export default function Home() {
             Testimonials
           </h2> */}
           <TestimonialsCarousel />
-   
         </section>
       </main>
     </>
