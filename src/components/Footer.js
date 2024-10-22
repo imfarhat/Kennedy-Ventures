@@ -114,7 +114,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/kennedy-ventures"
                   rel="noopener noreferrer"
                   target="_blank"
-                  className="bg-white aspect-square rounded-full hover:text-white hover:scale-105 active:scale-100 transition-transform duration-200 ease-in hover:bg-blue-600 text-blue-600 active:bg-opacity-85 border-2 border-transparent hover:border-white flex items-center justify-center"
+                  className="bg-white aspect-square rounded-full hover:text-white hover:scale-105 active:scale-100 transition-transform duration-200 ease-in hover:bg-blue-700/85 text-blue-700/85 active:bg-opacity-85 border-2 border-transparent hover:border-white flex items-center justify-center"
                 >
                   <Linkedin className="size-12 p-2.5" />
                 </Link>
