@@ -48,7 +48,7 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0 bg-black/50" />
       <div className="flex items-center justify-center w-full z-10">
-        <motion.strong
+        <motion.span
           ref={notAcceptingClientsRef}
           initial={{ y: -50, opacity: 0 }} // Start from left
           animate={{
@@ -56,10 +56,10 @@ const HeroSection = () => {
             opacity: isAcceptingClientsInView ? 1 : 0,
           }} // Animate to original position
           transition={{ duration: 0.5 }} // Adjust the duration as needed
-          className="uppercase italic text-sm md:text-base text-white/90"
+          className="uppercase italic text-sm md:text-base text-white/90 font-bold"
         >
           *** Not Accepting New Clients ***
-        </motion.strong>
+        </motion.span>
       </div>
       <div className="container flex flex-col items-start justify-center z-10 overflow-hidden">
         <motion.h2
