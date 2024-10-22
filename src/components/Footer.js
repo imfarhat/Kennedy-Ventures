@@ -145,7 +145,7 @@ const Footer = () => {
         <Button
           onClick={scrollToTop}
           variant="outline"
-          className="fixed bottom-4 right-4 hover:text-white active:text-white active:bg-opacity-75 size-10 p-2 aspect-square rounded-full shadow"
+          className="fixed bottom-4 right-4 hover:text-white active:text-white active:bg-opacity-75 size-10 p-2 aspect-square rounded-full shadow z-[3]"
         >
           <ArrowUp />
         </Button>

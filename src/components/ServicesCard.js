@@ -16,7 +16,7 @@ const ServicesCard = ({ data }) => {
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }} // Animate to full opacity and original position
       transition={{ duration: 0.5 }} // Adjust the duration as needed
     >
-      <Card className="max-w-[360px] w-full h-full text-secondary overflow-hidden hover:border-primary group hover:-translate-y-3 transition ease-in">
+      <Card className="max-w-[360px] w-full h-full text-secondary overflow-hidden group hover:-translate-y-3 transition ease-in">
         <CardHeader className="flex flex-row items-center justify-start gap-2 group-hover:bg-inherit bg-secondary/5 backdrop-blur-sm transition ease-in">
           <Image
             src={data.imagePath}

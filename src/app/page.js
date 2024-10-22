@@ -56,19 +56,19 @@ export default function Home() {
         <HeroSection />
         <section
           id="services"
-          className="flex flex-col w-full items-center justify-center bg-primary py-12 relative"
+          className="flex flex-col w-full items-center justify-center bg-inherit py-12 relative"
         >
           {/* <div className="bg-center bg-cover flex flex-col items-center justify-start relative py-8 md:py-12 bg-accent w-full">
-            <h2 className="text-white font-semibold text-3xl md:text-4xl z-10 pb-[5.5rem]">
+            <h2 className="text-white font-semibold text-3xl md:text-4xl z-[2] pb-[5.5rem]">
               Services
             </h2>
           </div> */}
 
-          <h2 className="text-white font-semibold text-3xl md:text-4xl w-full text-center px-4 drop-shadow-md z-10">
+          <h2 className="text-secondary font-semibold text-3xl md:text-4xl w-full text-center px-4 z-[2]">
             Services
           </h2>
-          <div className="inset-0 absolute top-0 bg-black/5"></div>
-          <div className="4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center z-10">
+          <div className="inset-0 absolute top-0 bg-black/0 z-[1]"></div>
+          <div className="4 mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 items-center justify-center z-[2]">
             {servicesSectionData.map((service, index) => (
               <ServicesCard data={service} key={index} />
             ))}
@@ -76,12 +76,12 @@ export default function Home() {
         </section>
         <section
           id="about"
-          className="w-full flex flex-col items-center justify-center py-12 px-4 container"
+          className="w-full flex flex-col items-center bg-secondary/5 justify-center py-12 px-4"
         >
           <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
             About Us
           </h2>
-          <article className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-x-6 md:gap-x-8 gap-y-8">
+          <article className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-x-6 md:gap-x-8 gap-y-8 container">
             {aboutSectionData.map((about, index) => (
               <React.Fragment key={index}>
                 <AboutUsCard data={about} />
@@ -95,7 +95,7 @@ export default function Home() {
 
         <section
           id="testimonials"
-          className="flex flex-col w-full items-center justify-center py-12"
+          className="flex flex-col w-full items-center justify-center pb-8"
         >
           {/* <h2 className="text-secondary font-semibold text-3xl md:text-4xl text-center container px-4">
             Testimonials

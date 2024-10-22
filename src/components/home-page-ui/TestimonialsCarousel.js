@@ -109,7 +109,7 @@ const TestimonialsCarousel = () => {
         ]}
         className="container px-4 flex items-center justify-center"
       >
-        <CarouselContent className="mt-8 flex space-x-4">
+        <CarouselContent className="mt-4 flex space-x-4">
           {testimonialsData.map((testimonial, index) => (
             <CarouselItem
               key={index}
@@ -131,7 +131,7 @@ const TestimonialsCarousel = () => {
         transition={{ duration: 0.5 }} // Adjust the duration as needed
         className="container px-4"
       >
-        <h3 className="mt-8 text-secondary font-semibold text-lg sm:text-xl md:text-2xl w-full text-center italic">
+        <h3 className="mt-4 text-secondary font-semibold text-lg sm:text-xl md:text-2xl w-full text-center italic">
           Your startup can be here. Contact us!
         </h3>
       </motion.div>
