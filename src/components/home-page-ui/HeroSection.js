@@ -29,23 +29,37 @@ const motionCTAItem = {
 const HeroSection = () => {
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
+  const notAcceptingClientsRef = useRef(null);
 
   const isHeadingInView = useInView(headingRef, { once: true });
   const isParagraphInView = useInView(paragraphRef, { once: true });
 
+  const isAcceptingClientsInView = useInView(notAcceptingClientsRef, {
+    once: true,
+  });
+
   return (
     <section
       id="hero"
-      className="bg-cover bg-center flex flex-col items-center justify-start relative pt-12 md:pt-16 bg-secondary/75 w-full px-4"
+      className="bg-cover bg-center flex flex-col items-center justify-center relative pt-12 md:pt-16 pb-12 md:pb-16 bg-secondary/75 w-full px-4"
       style={{
         backgroundImage: `url(${RunnderBgImage.src})`,
       }}
     >
       <div className="absolute inset-0 bg-black/50" />
-      <div className="z-10">
-        <strong className="uppercase italic text-sm md:text-base text-white/90">
+      <div className="flex items-center justify-center w-full z-10">
+        <motion.strong
+          ref={notAcceptingClientsRef}
+          initial={{ y: -50, opacity: 0 }} // Start from left
+          animate={{
+            y: isAcceptingClientsInView ? 0 : -50,
+            opacity: isAcceptingClientsInView ? 1 : 0,
+          }} // Animate to original position
+          transition={{ duration: 0.5 }} // Adjust the duration as needed
+          className="uppercase italic text-sm md:text-base text-white/90"
+        >
           *** Not Accepting New Clients ***
-        </strong>
+        </motion.strong>
       </div>
       <div className="container flex flex-col items-start justify-center z-10 overflow-hidden">
         <motion.h2
@@ -56,7 +70,7 @@ const HeroSection = () => {
             opacity: isHeadingInView ? 1 : 0,
           }} // Animate to original position
           transition={{ duration: 0.5 }} // Adjust the duration as needed
-          className="mt-4 md:mt-6 text-5xl md:text-8xl font-extrabold text-primary max-w-[55rem] font-run"
+          className="mt-6 md:mt-8 text-5xl md:text-8xl font-extrabold text-primary max-w-[55rem] font-run"
         >
           Are you ready <br /> <div className="mt-3 md:mt-6">to RUN</div>
         </motion.h2>
