@@ -108,15 +108,17 @@ const Footer = () => {
 
           <aside className="flex flex-col items-start justify-start h-full max-w-96">
             <h4 className="text-lg font-medium">Contact Us</h4>
-            <Link
-              href={`mailto:example@email.com?subject=${subject}&body=${body}`}
-              className="hover:underline mt-0.5"
-              prefetch={false}
-            >
-              Email: example@email.com
-            </Link>
+            <div className="mt-0.5 flex flex-col items-start justify-start h-full text-muted-foreground">
+              <Link
+                href={`mailto:example@email.com?subject=${subject}&body=${body}`}
+                className="hover:underline mt-0.5"
+                prefetch={false}
+              >
+                Email: example@email.com
+              </Link>
+            </div>
             <div className="flex items-center justify-start gap-2 mt-2">
-              <h4 className="font-medium mt-1">Social:</h4>
+              {/* <h4 className="font-medium mt-1">Social:</h4> */}
               <div>
                 <Link
                   href="https://www.linkedin.com/company/kennedy-ventures"
