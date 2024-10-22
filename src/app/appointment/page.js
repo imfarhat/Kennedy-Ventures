@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect } from "react";
 
 const Appointment = () => {
@@ -21,6 +22,15 @@ const Appointment = () => {
         <h1 className="text-secondary font-semibold text-3xl md:text-4xl mb-8 md:mb-2">
           Book Appointment
         </h1>
+        <Link
+          href="https://calendly.com/immoiffo/30min"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="text-muted-foreground text-xs md:text-sm mb-2 -mt-1"
+        >
+          Calender taking longer to load?{" "}
+          <span className="font-medium text-secondary">Click here</span>
+        </Link>
         <div
           className="calendly-inline-widget w-full h-[60rem] bg-contain bg-center bg-no-repeat bg-[url('/svgs/undraw_online_calendar_primary.svg')]"
           data-url="https://calendly.com/immoiffo/30min"
