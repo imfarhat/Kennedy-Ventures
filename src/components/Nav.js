@@ -12,7 +12,6 @@ const Nav = () => {
             height={146.25}
             width={260}
             priority
-unoptimized={true}
             className="-mx-6 -my-6 object-cover"
             alt="Kennedy Ventures Logo"
             unoptimized={true}
