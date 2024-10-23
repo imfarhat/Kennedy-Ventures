@@ -1,5 +1,6 @@
+import CalendlyCalendar from "@/components/appointment-page-ui/CalendlyCalendar";
 import Link from "next/link";
-import CalendlyCalendar from "@/components/home-page-ui/appointment-page-ui/calendlyCalendar";
+
 export const metadata = {
   title: "Book Appointment", // This will be inserted in the %s template in layout
   description:
