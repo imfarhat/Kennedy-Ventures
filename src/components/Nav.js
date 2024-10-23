@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <header className="bg-primary text-secondary z-40 flex items-center justify-center sticky top-0 shadow-md">
       <nav className="container pr-4 pl-0.5 w-full flex items-center justify-between">
-        <Link href="/" className="max-h-20" prefetch={true}>
+        <Link href="/" className="max-h-20 overflow-hidden" prefetch={true}>
           <Image
             src={LogoGif}
             height={146.25}
