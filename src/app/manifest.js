@@ -79,7 +79,7 @@ export default function manifest() {
       },
       {
         src: "/favicon.ico",
-        sizes: "any",
+        // sizes: "any",
         type: "image/x-icon",
       },
     ],
