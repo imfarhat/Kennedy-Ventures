@@ -12,7 +12,7 @@ const Loading = () => {
             width={260}
             priority
             alt="Kennedy Ventures Logo"
-            className="bg-primary"
+            className="bg-primary md:w-96 rounded-md"
             unoptimized={true}
           />
           <p className="text-muted-foreground">Loading. Please wait...</p>
