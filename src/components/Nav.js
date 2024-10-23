@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LogoGif from "@/assets/logo.gif";
 
+
 const Nav = () => {
   return (
     <header className="bg-primary text-secondary z-40 flex items-center justify-center sticky top-0 shadow-md">
