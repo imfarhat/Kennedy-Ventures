@@ -19,14 +19,14 @@ const Appointment = () => {
   return (
     <main className="min-h-screen h-full flex flex-col items-center justify-start">
       <section className="container px-4 mt-12 md:mt-20 mb-24 flex flex-col items-center justify-center">
-        <h1 className="text-secondary font-semimibold text-3xl">
+        <h1 className="text-secondary font-semibold text-3xl md:text-4xl text-center">
           Book Appointment
         </h1>
         <Link
           href="https://calendly.com/immoiffo/30min"
           rel="noopener noreferrer"
           target="_blank"
-          className="text-muted-foreground text-xs md:text-sm md:text-4xl mb-8 md:mb-2"
+          className="text-muted-foreground text-xs md:text-sm mb-8 md:mb-2"
         >
           Calender taking longer to load?{" "}
           <span className="font-medium text-secondary">Click here</span>
