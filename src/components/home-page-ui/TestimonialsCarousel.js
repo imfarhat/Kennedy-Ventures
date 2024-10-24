@@ -128,7 +128,7 @@ const TestimonialsCarousel = () => {
           y: isCTAInView ? 0 : 50,
           opacity: isCTAInView ? 1 : 0,
         }} // Animate to position and opacity
-        transition={{ duration: 0.5 }} // Adjust the duration as needed
+        transition={{ stiffness: 100 }} // Adjust the duration as needed
         className="container px-4"
       >
         <h3 className="mt-4 text-secondary font-semibold text-lg sm:text-xl md:text-2xl w-full text-center italic">
