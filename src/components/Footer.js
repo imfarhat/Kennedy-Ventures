@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowUp, Linkedin } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import CircularScrollProgress from "@/components/CircularScrollProgress";
 
 const Footer = () => {
   const ref = useRef(null);
@@ -142,13 +143,14 @@ const Footer = () => {
 
       {/* Scroll to Top Button */}
       {isVisible && (
-        <Button
+        /*<Button
           onClick={scrollToTop}
           variant="outline"
           className="fixed bottom-4 right-4 hover:text-white active:text-white active:bg-opacity-75 size-10 p-2 aspect-square rounded-full shadow z-[3]"
         >
           <ArrowUp />
-        </Button>
+        </Button> */
+        <CircularScrollProgress />
       )}
     </footer>
   );
