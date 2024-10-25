@@ -29,8 +29,8 @@ const CircularScrollProgress = () => {
       >
         {/* SVG circle background and progress */}
         <svg
-          width=""
-          height=""
+          width="40"
+          height="40"
           viewBox="0 0 100 100"
           className="absolute inset-0 rotate-[-90deg] z-[1]" // Rotated to start progress from top
         >
