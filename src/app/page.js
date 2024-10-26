@@ -11,7 +11,7 @@ const aboutSectionData = [
   {
     name: "Scott Kennedy",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsam harum quam eum.",
+      "Venture-funded serial founder and fractional CEO with exits. Investor, advisor and speaker.",
     imagePath: "/scott-kennedy.jpg",
   },
   {

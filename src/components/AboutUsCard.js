@@ -26,7 +26,7 @@ const AboutUsCard = ({ data }) => {
       />
       <span className="border-b-4 border-double border-muted-foreground w-1/2 mt-4 md:mt-6"></span>
       <h3 className="mt-2 text-xl font-semibold text-center">{data.name}</h3>
-      <p className="mt-0.5 px-4 text-muted-foreground text-justify text-sm md:text-base">
+      <p className="mt-0.5 px-4 text-muted-foreground text-sm md:text-base text-center max-w-96">
         {data.about}
       </p>
     </motion.aside>
