@@ -15,7 +15,7 @@ const CircularScrollProgress = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    return progress.onChange((latest) => {
+    return progress.on("change", (latest) => {
       setScrollProgress(latest); // Progress is a value between 0 and 1
     });
   }, [progress]);
