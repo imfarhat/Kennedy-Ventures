@@ -8,7 +8,7 @@ export function middleware() {
     if (currentDate > cutoffDate) {
       return NextResponse.json(
         {
-          error: "Access denied: Soemthing went wrong!",
+          error: "Access denied: Testing Phase Ended!",
         },
         { status: 403 }
       );
