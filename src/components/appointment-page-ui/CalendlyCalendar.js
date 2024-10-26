@@ -9,6 +9,7 @@ const CalendlyCalendar = () => {
     script.async = true;
     document.body.appendChild(script);
 
+    
     // Cleanup the script when the component unmounts
     return () => {
       document.body.removeChild(script);
