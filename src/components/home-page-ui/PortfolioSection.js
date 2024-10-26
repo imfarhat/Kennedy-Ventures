@@ -14,7 +14,7 @@ const PortfolioSection = () => {
 
   return (
     <section className="flex flex-col w-full items-center justify-center pt-12 pb-6 container overflow-hidden px-4 selection:bg-white selection:text-secondary">
-      <div className="flex flex-col items-center justify-center bg-secondary py-6 px-4 rounded-md overflow-hidden relative">
+      <div className="flex flex-col items-center justify-center bg-secondary py-6 px-4 rounded-md md:rounded-lg overflow-hidden relative">
         <div className="inset-0 absolute top-0 bg-black/0 z-[1]"></div>
         <motion.h2
           ref={headingRef}
