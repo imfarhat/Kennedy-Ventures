@@ -41,7 +41,7 @@ const FooterContactSection = () => {
             asChild
           >
             <Link
-              href={`mailto:example@email.com?subject=${subject}&body=${body}`}
+              href={`mailto:info@kennedyventures.co?subject=${subject}&body=${body}`}
             >
               Contact Us
             </Link>

@@ -111,11 +111,11 @@ const Footer = () => {
             <h4 className="text-lg font-medium">Contact Us</h4>
             <div className="mt-0.5 flex flex-col items-start justify-start h-full text-muted-foreground">
               <Link
-                href={`mailto:example@email.com?subject=${subject}&body=${body}`}
+                href={`mailto:info@kennedyventures.co?subject=${subject}&body=${body}`}
                 className="hover:underline mt-0.5"
                 prefetch={true}
               >
-                Email: example@email.com
+                Email: info@kennedyventures.co
               </Link>
             </div>
             <div className="flex items-center justify-start gap-2 mt-2">
